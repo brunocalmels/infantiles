@@ -1,0 +1,32 @@
+.cat-item {
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 15px;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+.cat-item a {
+	color: #9c4663;
+}
+.cat-item a:before {
+	position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+	top: 10px;
+}
+.cat-item-3 a:before {
+	content: url('http://localhost/bodas/wp-content/uploads/2016/11/moda_small_hover.png');
+}
+.cat-item-5 a:before {
+	content: url('http://localhost/bodas/wp-content/uploads/2016/11/salones_deco_small_hover.png');
+}
+.cat-item-4 a:before {
+	content: url('http://localhost/bodas/wp-content/uploads/2016/11/gastronomia_small_hover.png');
+}
+.cat-item-6 a:before {
+	content: url('http://localhost/bodas/wp-content/uploads/2016/11/estetica_small_hover.png');
+}
+.cat-item-8 a:before {
+	content: url('http://localhost/bodas/wp-content/uploads/2016/11/animacion_small_hover.png');
+}
+
+.li
