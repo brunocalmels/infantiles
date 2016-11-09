@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'High Tower';  
+	src: url('HighTower.ttf');  
+	font-weight: normal;  
+}
+@font-face {
+	font-family: 'High Tower';  
+	src: url('HighTower-IT.ttf');  
+	font-style: italic;
+}
+/*@font-face {
+	font-family: 'High Tower';  
+	src: url('HighTower.ttf');  
+	font-weight: normal;  
+}
+@font-face {
+	font-family: 'High Tower';  
+	src: url('HighTower.ttf');  
+	font-weight: normal;  
+}*/
+
+body, input, textarea {
+	font-family: 'High Tower';
+}

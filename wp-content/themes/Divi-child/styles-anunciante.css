@@ -1,0 +1,70 @@
+
+.single-anunciante #main-content {
+	background-image: url('http://localhost/bodas/wp-content/uploads/2016/11/fondo_rubros.jpg');
+	background-size: cover;
+	background-position: bottom left; 
+}
+#anunciante {
+	color: #111;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.2);
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#anunciante #an-nombre {
+	position: relative;
+  top: 20px;
+  padding: 10px 5px 5px 5px;
+	width: 100%;
+	background-color: #fff; 
+	text-align: center;
+}
+#anunciante #an-datos {
+	display: flex;
+	position: relative;
+  top: 20px;
+}
+#anunciante #an-datos div {
+    margin: 20px;
+    padding: 10px;
+  }
+#anunciante #an-datos div {
+	background-color: rgba(246, 233, 233, 0.52);
+	border-radius: 10px;
+}
+#anunciante #an-datos div h3 {	
+	text-align: center;
+}
+.logoinfo {
+	max-width: 400px;
+}
+.contacto-list {
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-type: none !important;
+}
+.contacto-list li {
+	background-color: rgba(255, 255, 255, 0.52);
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+  white-space: nowrap;
+}
+.contacto-list li i {
+	color: #9c4663;
+}
+.an-formulario input, .an-formulario textarea {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.52);
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+}
+.an-formulario input[type=submit] {
+	width: inherit;
+	float: right;
+}
+.an-formulario textarea {
+	height: 5em;
+}

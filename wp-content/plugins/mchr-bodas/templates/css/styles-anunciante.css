@@ -1,0 +1,20 @@
+
+#anunciante {
+	color: #111;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.2);
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#anunciante #an-nombre {
+	width: 100%;
+	background-color: #fff; 
+	text-align: center;
+}
+#anunciante #an-datos {
+	display: flex;
+}
+.contacto-list {
+	list-style: none;
+}

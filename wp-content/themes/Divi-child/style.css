@@ -1,0 +1,119 @@
+/*
+ Theme Name:     Divi Child Theme
+ Theme URI:      http://www.macherit.com
+ Description:    Divi Child Theme by Macher IT para Bodas
+ Author:         Macher IT
+ Author URI:     http://www.macherit.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+ 
+@import url("../Divi/style.css");
+@import url("fonts/fonts.css");
+@import url("styles-anunciante.css");
+ 
+/* Theme customization starts here
+------------------------------------------------------- */
+/*
+	Bordó hover: #9c4663;
+*/
+#encabezado {
+	width: 35%;
+	/* IE Fix:
+	display: table; */
+	display: flex;
+	align-items: center;
+}
+#encabezado div {
+	/* IE Fix:
+	display: table-cell; */
+}
+#bodas_header {
+	padding-right: 1em;
+}
+#bodas_header p {
+	font-size: 300%;
+	text-transform: uppercase;
+}
+#bodas_header p::first-letter {
+	font-size: 150%;
+}
+#bodas_header p::last-child {
+	font-size: 150%;
+}
+#subt_header {
+	text-transform: uppercase;
+	width: 45%;
+	border-left: 2px solid #fff;
+	padding-left: 1em;
+} 
+
+/* Rubros */
+div.rubro {
+	border-radius: 10px;
+	display: flex;
+	position: relative;
+  background-size: cover;
+	justify-content: center;
+	align-items: center;
+}
+div.rubro div.hover {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.4);
+	width: 100%;
+	height: 0;
+}
+div.rubro div.hover.resaltada {
+	height: 100%;
+}
+div.rubro div.icono {
+	z-index: 100;
+}
+div.rubro div.icono img {
+	max-width: 50%;
+	margin: 50px 20%;
+}
+
+div.rubro div.nombre {
+	text-transform: uppercase;
+	font-size: 150%;
+	color: #9c4663;
+	background-color: #fff;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 25px;
+}
+div.rubro div.nombre.resaltada{
+	color: #fff;
+	background-color: #9c4663;
+}
+div.rubro div, div.rubro div img {
+	transition-duration: 0.4s;
+}
+
+/* Footer */
+#main-footer {
+	background-color: #9c4663;
+	margin-top: -30px;
+}
+#main-footer h4 {
+	color: #fff;
+}
+i.fa {
+	margin-right: 0.5em;
+}
+
+
+/* Responsivititititityyyy */
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
