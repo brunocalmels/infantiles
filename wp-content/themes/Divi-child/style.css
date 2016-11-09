@@ -18,7 +18,7 @@
 /*
 	Bordó hover: #9c4663;
 */
-#encabezado {
+#encabezado, #contenedor-contacto {
 	width: 35%;
 	/* IE Fix:
 	display: table; */
@@ -38,9 +38,6 @@
 	text-transform: uppercase;
 }
 #bodas_header p::first-letter {
-	font-size: 150%;
-}
-#bodas_header p::last-child {
 	font-size: 150%;
 }
 #subt_header {
@@ -107,6 +104,64 @@ i.fa {
 	margin-right: 0.5em;
 }
 
+/* Guia de servicios */
+.titulo_franja {
+	background-color: rgba(255, 255, 255, 0.52);
+	text-transform: uppercase;
+	padding: 1em;
+}
+.org-rubro {
+	background-color: #9c4663;
+	border-radius: 10px;
+  padding: 10px;
+}
+.org-rubro p {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 150%;
+}
+.org-check {
+	position: absolute;
+	margin: 10px;
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+.org-formulario {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.org-formulario input, .org-formulario textarea {
+	width: 45%;
+	background-color: rgba(255, 255, 255, 0.52);
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+}
+.org-formulario input {
+	float: left;
+}
+.org-formulario input[type=submit] {
+	width: inherit;
+	float: right;
+}
+.org-formulario textarea {
+	height: 5em;
+	float: right;
+}
+p.negro {
+	color: #111 !important;
+}
+#contenedor-contacto div#subt_header {
+  border-color: #111;
+}
 
 /* Responsivititititityyyy */
 /* Small devices (landscape phones, 544px and up) */

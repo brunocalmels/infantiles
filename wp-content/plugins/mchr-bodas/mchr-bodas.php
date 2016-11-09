@@ -54,6 +54,20 @@ function mchr_registrar_widgets() {
 	register_widget( 'mchr_rubros_widget' );
 }
 
+// Shortcode para el formulario de contacto
+add_shortcode( 'formulario', 'formulario_shortcode' );
+function formulario_shortcode() {
+	$ret = '<form class="org-formulario" action="#">';
+	$ret .= wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
+	$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
+	$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
+	$ret .= '<input type="text" name="email" placeholder="Email" />';
+	$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
+	$ret .= '<input type="submit" name="enviar" value="Enviar">';
+	$ret .= '</form>';
+	return $ret;
+}
+
 
 // Define funcion para loguear
 if ( ! function_exists('write_log') ) {
