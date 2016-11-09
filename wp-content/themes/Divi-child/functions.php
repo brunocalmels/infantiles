@@ -7,7 +7,7 @@ function theme_enqueue_styles() {
 ?>
 
 <?php
-// Agrega archivos de JS
+// Agrega archivos de efectos y estetitca con JS
 function agrega_efectos_js() {
     wp_enqueue_script(
         'custom-script',
@@ -17,8 +17,25 @@ function agrega_efectos_js() {
         true
     );
 }
-
 add_action( 'wp_enqueue_scripts', 'agrega_efectos_js' );
+?>
+
+<?php
+add_action( 'admin_enqueue_scripts', 'wp_enqueue_media' );
+?>
+
+<?php
+// Agrega funcionalidad de media uploader
+function subida_img_js() {
+    wp_enqueue_script(
+        'custom-script',
+        get_stylesheet_directory_uri() . '/js/subida_img.js',
+        array( 'jquery' ),
+        '1.0.0',
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'subida_img_js' );
 ?>
 
 <?php

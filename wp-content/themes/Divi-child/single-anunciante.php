@@ -77,7 +77,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 											}
 											$facebook = get_post_meta( get_the_ID(), '_facebook', true );
 											if($facebook !== ''){
-												echo "<li class='an-item'><i class='fa fa-facebook-square' aria-hidden='true'></i><a href=" . esc_url($facebook) . ">" . $facebook . "</a></li>";
+												echo "<li class='an-item'><i class='fa fa-facebook-square' aria-hidden='true'></i><a href=" . esc_url($facebook) . ">" . $post->post_title . "</a></li>";
 											}
 											$web = get_post_meta( get_the_ID(), '_web', true );
 											if($web !== ''){

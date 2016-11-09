@@ -12,6 +12,7 @@ License: GPLv2
 
 include_once('includes/anunciante-post-type.php');
 include_once('includes/anunciante-meta-boxes.php');
+include_once('includes/rubros-widget.php');
 
 //  Acciones de Activación
 register_activation_hook( __FILE__, 'mchr_install' );
@@ -44,6 +45,15 @@ function registrar_tipos() {
 	reg_anunciante_post_type();
 	add_action('add_meta_boxes_anunciante', 'anunciantes_meta_box_init');
 }
+
+
+// Agrega los widgets
+add_action( 'widgets_init', 'mchr_registrar_widgets' );
+
+function mchr_registrar_widgets() {
+	register_widget( 'mchr_rubros_widget' );
+}
+
 
 // Define funcion para loguear
 if ( ! function_exists('write_log') ) {

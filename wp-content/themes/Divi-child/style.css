@@ -11,6 +11,7 @@
 @import url("../Divi/style.css");
 @import url("fonts/fonts.css");
 @import url("styles-anunciante.css");
+@import url("styles-widget-rubros.css");
  
 /* Theme customization starts here
 ------------------------------------------------------- */
@@ -32,6 +33,7 @@
 	padding-right: 1em;
 }
 #bodas_header p {
+	color: #fff;
 	font-size: 300%;
 	text-transform: uppercase;
 }
@@ -42,6 +44,7 @@
 	font-size: 150%;
 }
 #subt_header {
+	color: #fff;
 	text-transform: uppercase;
 	width: 45%;
 	border-left: 2px solid #fff;

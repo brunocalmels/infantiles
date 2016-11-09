@@ -23,6 +23,11 @@ function anunciante_meta_box ( $reparacion, $box ) {
 	$facebook = get_post_meta( $reparacion->ID, '_facebook', true );
 	// Nonce for security
 	wp_nonce_field( plugin_basename( __FILE__ ), 'anunciante_guardar_meta_box' );
+	?>
+	<div class="logo_upload">
+		<input id="img_upload" class="button" name="img_upload" type="text" value="Elegir" />
+	</div>
+	<?php
 	// custom meta box form elements
 	echo '<p>Dirección <input type="text" name="direccion" value="'.esc_attr( $direccion ).'" size="40" /></p>';
 		echo '<p>Ciudad <input type="text" name="ciudad" value="'.esc_attr( $ciudad ).'" size="40" /></p>';
@@ -30,7 +35,7 @@ function anunciante_meta_box ( $reparacion, $box ) {
 	echo '<p>Teléfono opt. <input type="text" name="telefono2" value="'.esc_attr( $telefono2 ).'" size="20" /></p>';
 		echo '<p>Teléfono opt. 2 <input type="text" name="telefono3" value="'.esc_attr( $telefono3 ).'" size="20" /></p>';
 	echo '<p>Email <input type="text" name="email" value="'.esc_attr( $email ).'" size="40" /></p>';
-	echo '<p>Fcebook <input type="text" name="facebook" value="'.esc_attr( $facebook ).'" size="40" /></p>';
+	echo '<p>Facebook <input type="text" name="facebook" value="'.esc_attr( $facebook ).'" size="40" /></p>';
 	echo '<p>Sitio web <input type="text" name="web" value="'.esc_attr( $web ).'" size="40" /></p>';
 }
 ?>
@@ -49,8 +54,10 @@ function anunciante_guardar_meta_box( $post_id ) {
 		update_post_meta( $post_id, '_ciudad', sanitize_text_field( $_POST['ciudad'] ) );
 		update_post_meta( $post_id, '_telefono1', sanitize_text_field( $_POST['telefono1'] ) );
 		update_post_meta( $post_id, '_telefono2', sanitize_text_field( $_POST['telefono2'] ) );
+		update_post_meta( $post_id, '_telefono3', sanitize_text_field( $_POST['telefono3'] ) );
 		update_post_meta( $post_id, '_email', sanitize_text_field( $_POST['email'] ) );
 		update_post_meta( $post_id, '_web', sanitize_text_field( $_POST['web'] ) );
+		update_post_meta( $post_id, '_facebook', sanitize_text_field( $_POST['facebook'] ) );
 	}
 }
 ?>
