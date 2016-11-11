@@ -14,6 +14,7 @@ function anunciantes_meta_box_init() {
 function anunciante_meta_box ( $reparacion, $box ) {
 	// Retrieve the custom meta box values
 	$logo_url = get_post_meta( $reparacion->ID, '_logo_url', true );
+	$auspiciante = get_post_meta( $reparacion->ID, '_auspiciante', true );
 	$direccion = get_post_meta( $reparacion->ID, '_direccion', true );
 	$ciudad = get_post_meta( $reparacion->ID, '_ciudad', true );
 	$telefono1 = get_post_meta( $reparacion->ID, '_telefono1', true );
@@ -28,10 +29,14 @@ function anunciante_meta_box ( $reparacion, $box ) {
 	<div class="logo_upload">
 		<img id="logo_img" src="<?php echo $logo_url; ?>" width="150">
 		<a id="img_upload" class="button">Elegir imagen</a>
-		<input type="hidden" id="logo_url" name="logo_url" value="" />
+		<input type="hidden" id="logo_url" name="logo_url" value='<?php echo $logo_url ?>' />
 	</div>
 	<?php
 	// custom meta box form elements
+	echo '<p>Auspiciante <input type="checkbox" name="auspiciante" value="1"';
+	if( $auspiciante === "1" )
+		echo 'checked';
+	echo '/></p>';
 	echo '<p>Dirección <input type="text" name="direccion" value="'.esc_attr( $direccion ).'" size="40" /></p>';
 	echo '<p>Ciudad <input type="text" name="ciudad" value="'.esc_attr( $ciudad ).'" size="40" /></p>';
 	echo '<p>Teléfono <input type="text" name="telefono1" value="'.esc_attr( $telefono1 ).'" size="20" /></p>';
@@ -55,6 +60,7 @@ function anunciante_guardar_meta_box( $post_id ) {
 
 		update_post_meta( $post_id, '_logo_url', sanitize_text_field( $_POST['logo_url'] ) );
 		update_post_meta( $post_id, '_direccion', sanitize_text_field( $_POST['direccion'] ) );
+		update_post_meta( $post_id, '_auspiciante', sanitize_text_field( $_POST['auspiciante'] ) );
 		update_post_meta( $post_id, '_ciudad', sanitize_text_field( $_POST['ciudad'] ) );
 		update_post_meta( $post_id, '_telefono1', sanitize_text_field( $_POST['telefono1'] ) );
 		update_post_meta( $post_id, '_telefono2', sanitize_text_field( $_POST['telefono2'] ) );

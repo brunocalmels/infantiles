@@ -4,11 +4,31 @@
 	background-size: cover;
 	background-position: bottom left; 
 }
-#anunciante {
+#anunciante, #auspiciantes {
 	color: #111;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.2);
 	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#auspiciantes {
+	margin-bottom: 20px;
+  padding: 10px;
+}
+.auspiciante {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+  border: 5px solid #fff;
+}
+.auspiciante a {
+	color: #111;
+	display: table;
+}
+.auspiciante a img {
+	max-width: 90%;
+	display: table-row;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -19,6 +39,9 @@
 	width: 100%;
 	background-color: #fff; 
 	text-align: center;
+}
+#anunciante #an-nombre h1 span {	
+	font-size: 80%;
 }
 #anunciante #an-datos {
 	display: flex;
@@ -34,6 +57,7 @@
 #anunciante #an-datos div h3 {	
 	text-align: center;
 }
+
 .logoinfo {
 	max-width: 400px;
 	display: flex;

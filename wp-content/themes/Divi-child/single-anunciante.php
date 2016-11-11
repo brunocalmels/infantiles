@@ -32,11 +32,52 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 						<?php
 						  do_action( 'et_before_content' );
 						?>
+
+						<!-- Auspiciantes -->
+						<div id="auspiciantes">
+							<?php
+								$args = array(
+										'posts_per_page' => 6,
+										'orderby' => 'rand',
+										'post_type' => 'anunciante',
+										/*'tax_query' => array(
+											'taxonomy' => 'rubro',
+											'field' => 'name',
+											'terms' => $rubro
+										)*/
+										'meta_key' => '_auspiciante',
+										'meta_value' => '1'
+									);
+								$auspiciantes = new WP_Query( $args );
+								while ( $auspiciantes->have_posts() ) :
+									$auspiciantes->the_post();
+									?>
+									<div class="auspiciante">
+										<a href=<?php the_permalink(); ?> >
+											<img class="logo_auspiciante" src=<?php echo get_post_meta( get_the_ID(), '_logo_url', true );?> alt=<?php echo the_title();?> >
+											<div class="titulo_franja center">
+												<?php the_title(); ?>
+											</div>
+										</a>
+									</div>
+									<?php
+								endwhile;
+								// Reset Post Data
+								wp_reset_postdata();						
+							?>
+						</div>
 						
 						<!-- Recuadro contenedor -->
 						<div id="anunciante">
 							<div id="an-nombre">
-								<?php echo '<h1>' . $post->post_title . '</h1>'; ?>
+								<?php
+									$rubro = get_the_terms( get_the_ID(), 'rubro' );
+									if ( $rubro && ! is_wp_error( $rubro ) )
+										echo '<h1>' . $post->post_title . ' - <span> ' . $rubro[0]->name . '</span></h1>';
+									else
+										echo '<h1>' . $post->post_title . '</h1>';
+
+									?>
 							</div>		
 							<div id="an-datos">
 								<?php

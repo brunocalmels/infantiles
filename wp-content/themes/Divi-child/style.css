@@ -18,6 +18,9 @@
 /*
 	Bordó hover: #9c4663;
 */
+.center {
+	text-align: center;
+}
 #encabezado {
 	width: 35%;
 	/* IE Fix:
