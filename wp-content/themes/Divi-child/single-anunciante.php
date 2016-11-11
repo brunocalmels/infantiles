@@ -40,7 +40,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 							</div>		
 							<div id="an-datos">
 								<?php
-									$logo = get_post_meta( get_the_ID(), '_logo', true );
+									$logo = get_post_meta( get_the_ID(), '_logo_url', true );
 									if( $logo !== '') {
 										echo '<div class="logoinfo">';
 											echo '<img src=' . esc_url($logo) . ' alt=' . $post->post_title . ' />';	

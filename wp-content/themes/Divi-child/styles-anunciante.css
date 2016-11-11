@@ -26,10 +26,8 @@
   top: 20px;
 }
 #anunciante #an-datos div {
-    margin: 20px;
-    padding: 10px;
-  }
-#anunciante #an-datos div {
+  margin: 20px;
+  padding: 10px;
 	background-color: rgba(246, 233, 233, 0.52);
 	border-radius: 10px;
 }
@@ -38,6 +36,11 @@
 }
 .logoinfo {
 	max-width: 400px;
+	display: flex;
+	align-items: center;
+}
+.logoinfo img {
+	max-width: 100%;
 }
 .contacto-list {
 	padding: 0 !important;
