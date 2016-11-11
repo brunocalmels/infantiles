@@ -1,4 +1,4 @@
-function enviarMail(str) {
+function enviarMail(nombre, email, tel, lista) {
 	var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -8,7 +8,7 @@ function enviarMail(str) {
         	alert("No se pudo enviar el formulario. Por favor, comunicate con nosotros telefónicamente y te atenderemos con gusto.");
       }
   };
-  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?rubros=" + str, true);
+  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?nombre=" + nombre + "&email=" + email + "&tel=" + tel + "&rubros=" + lista, true);
   ajax.send();
 }
 
@@ -37,7 +37,7 @@ function enviarMail(str) {
 						lista += rubros[i].value + ' ';
 					}
 				}
-				enviarMail(lista);
+				enviarMail(nombre, email, tel, lista);
 			}
 		}
 
