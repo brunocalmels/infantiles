@@ -13,6 +13,7 @@ function anunciantes_meta_box_init() {
 // Función para mostrar el meta_box para la reparacion.
 function anunciante_meta_box ( $reparacion, $box ) {
 	// Retrieve the custom meta box values
+	$logo_url = get_post_meta( $reparacion->ID, '_logo_url', true );
 	$direccion = get_post_meta( $reparacion->ID, '_direccion', true );
 	$ciudad = get_post_meta( $reparacion->ID, '_ciudad', true );
 	$telefono1 = get_post_meta( $reparacion->ID, '_telefono1', true );
@@ -25,15 +26,17 @@ function anunciante_meta_box ( $reparacion, $box ) {
 	wp_nonce_field( plugin_basename( __FILE__ ), 'anunciante_guardar_meta_box' );
 	?>
 	<div class="logo_upload">
-		<input id="img_upload" class="button" name="img_upload" type="text" value="Elegir" />
+		<img id="logo_img" src="<?php echo $logo_url; ?>" width="150">
+		<a id="img_upload" class="button">Elegir imagen</a>
+		<input type="hidden" id="logo_url" name="logo_url" value="" />
 	</div>
 	<?php
 	// custom meta box form elements
 	echo '<p>Dirección <input type="text" name="direccion" value="'.esc_attr( $direccion ).'" size="40" /></p>';
-		echo '<p>Ciudad <input type="text" name="ciudad" value="'.esc_attr( $ciudad ).'" size="40" /></p>';
+	echo '<p>Ciudad <input type="text" name="ciudad" value="'.esc_attr( $ciudad ).'" size="40" /></p>';
 	echo '<p>Teléfono <input type="text" name="telefono1" value="'.esc_attr( $telefono1 ).'" size="20" /></p>';
 	echo '<p>Teléfono opt. <input type="text" name="telefono2" value="'.esc_attr( $telefono2 ).'" size="20" /></p>';
-		echo '<p>Teléfono opt. 2 <input type="text" name="telefono3" value="'.esc_attr( $telefono3 ).'" size="20" /></p>';
+	echo '<p>Teléfono opt. 2 <input type="text" name="telefono3" value="'.esc_attr( $telefono3 ).'" size="20" /></p>';
 	echo '<p>Email <input type="text" name="email" value="'.esc_attr( $email ).'" size="40" /></p>';
 	echo '<p>Facebook <input type="text" name="facebook" value="'.esc_attr( $facebook ).'" size="40" /></p>';
 	echo '<p>Sitio web <input type="text" name="web" value="'.esc_attr( $web ).'" size="40" /></p>';
@@ -50,6 +53,7 @@ function anunciante_guardar_meta_box( $post_id ) {
 			return;
 		wp_verify_nonce( plugin_basename( __FILE__ ), 'anunciante_guardar_meta_box' );
 
+		update_post_meta( $post_id, '_logo_url', sanitize_text_field( $_POST['logo_url'] ) );
 		update_post_meta( $post_id, '_direccion', sanitize_text_field( $_POST['direccion'] ) );
 		update_post_meta( $post_id, '_ciudad', sanitize_text_field( $_POST['ciudad'] ) );
 		update_post_meta( $post_id, '_telefono1', sanitize_text_field( $_POST['telefono1'] ) );

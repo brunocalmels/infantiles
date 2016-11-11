@@ -35,34 +35,32 @@ function agrega_js() {
 		  )
 		);
     wp_enqueue_script('ajax_form_js');
-
 }
 
 add_action( 'wp_enqueue_scripts', 'agrega_js' );
 ?>
 
 <?php
-add_action( 'admin_enqueue_scripts', 'wp_enqueue_media' );
-?>
-
-<?php
-// Agrega funcionalidad de media uploader
-function subida_img_js() {
-    wp_enqueue_script(
-        'custom-script',
-        get_stylesheet_directory_uri() . '/js/subida_img.js',
-        array( 'jquery' ),
-        '1.0.0',
-        true
-    );
+function agrega_admin_js() {
+  // Agrega funcionalidad de media uploader
+  wp_register_script(
+      'subida_img_js',
+      get_stylesheet_directory_uri() . '/js/subida_img.js',
+      array( 'jquery' ),
+      '1.0.0',
+      true
+  );
+  wp_enqueue_script('subida_img_js');
+  wp_enqueue_media(); // Necesario para el media uploader
 }
-add_action( 'wp_enqueue_scripts', 'subida_img_js' );
+
+add_action( 'admin_enqueue_scripts', 'agrega_admin_js' );
 ?>
 
 <?php
 // Agrega Font Awesome para los iconos.
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 function enqueue_load_fa() {
-    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+  wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 }
 ?>

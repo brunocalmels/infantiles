@@ -3,26 +3,25 @@
 
 		$('#img_upload').click(function(e) {
 		  e.preventDefault();
-		  frame = wp.media({
-		    title : 'My Gallery Title',
-		    multiple : true,
-		    library : { type : 'image'},
-		    button : { text : 'Insert' },
-		  });
-		  frame.on('close',function() {
-		    // get selections and save to hidden input plus other AJAX stuff etc.
-		  });
-			frame.on('open',function() {
-			  var selection = frame.state().get('selection');
-			  ids = $('#my_field_id').val().split(',');
-		    ids.forEach(function(id) {
-				  attachment = wp.media.attachment(id);
-				  attachment.fetch();
-				  selection.add( attachment ? [ attachment ] : [] );
-				});
-			});
-			frame.open();
-		});
 
+		  frame = wp.media({
+		    title : 'Seleccionar imagen',
+		    multiple : false,
+		    library : { type : 'image'},
+		    button : { text : 'Elegir' },
+		  })
+		  .on('select', function() {
+				var attachment = frame.state().get('selection').first().toJSON();
+        $('#logo_img').attr('src', attachment.url);
+        $('#logo_url').val(attachment.url);
+		  })
+		  .on('close', function() {
+		  	// Se puede hacer algo de AJAX si hace falta...
+		  })
+			.on('open', function() {
+			  //Se podria hacer que reconozca el archivo ya seleccionado...
+			})
+			.open();
+		});
 	});
 })(jQuery);
