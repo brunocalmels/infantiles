@@ -18,7 +18,7 @@
 /*
 	Bordó hover: #9c4663;
 */
-#encabezado, #contenedor-contacto {
+#encabezado {
 	width: 35%;
 	/* IE Fix:
 	display: table; */
@@ -122,7 +122,8 @@ i.fa {
 }
 .org-check {
 	position: absolute;
-	margin: 10px;
+	right: 5%;
+	top: 5%;
   /* Double-sized Checkboxes */
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
@@ -132,36 +133,68 @@ i.fa {
   padding: 10px;
 }
 
+div.formulario {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 .org-formulario {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 .org-formulario input, .org-formulario textarea {
-	width: 45%;
+	width: 100%;
 	background-color: rgba(255, 255, 255, 0.52);
 	border-radius: 5px;
 	margin-bottom: 5px;
 	padding: 5px 10px;
 }
 .org-formulario input {
-	float: left;
+	/*float: left;*/
 }
 .org-formulario input[type=submit] {
 	width: inherit;
 	float: right;
+	clear: both;
 }
 .org-formulario textarea {
 	height: 5em;
-	float: right;
+	/*float: right;*/
+}
+#org-submit-div {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#org-submit {
+  font-size: 150%;
+  padding: 0.5em 1em;
 }
 p.negro {
 	color: #111 !important;
 }
-#contenedor-contacto div#subt_header {
-  border-color: #111;
+#contacto {
+	color: #111;
+	border-radius: 20px;
+	background-color: rgba(255,255,255,0.2);
+	width: 90%;
+	max-width: 900px !important;
+	margin-left: auto;
+	margin-right: auto;
 }
+#contenedor-contacto {
+	width: 50%;
+	/* IE Fix:
+	display: table; */
+	display: flex;
+	align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#contenedor-contacto div#subt_header {
+  border-color: #111 !important;
+}
+
 
 /* Responsivititititityyyy */
 /* Small devices (landscape phones, 544px and up) */

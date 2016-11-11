@@ -59,11 +59,15 @@ add_shortcode( 'formulario', 'formulario_shortcode' );
 function formulario_shortcode() {
 	$ret = '<form class="org-formulario" action="#">';
 	$ret .= wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
-	$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
-	$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
-	$ret .= '<input type="text" name="email" placeholder="Email" />';
-	$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
-	$ret .= '<input type="submit" name="enviar" value="Enviar">';
+	$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_1">';
+		$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
+		$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
+		$ret .= '<input type="text" name="email" placeholder="Email" />';
+	$ret .= '</div>';
+	$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
+		$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
+		$ret .= '<input type="submit" name="enviar" value="Enviar">';
+	$ret .= '</div>';
 	$ret .= '</form>';
 	return $ret;
 }

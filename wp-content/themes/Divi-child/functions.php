@@ -7,17 +7,38 @@ function theme_enqueue_styles() {
 ?>
 
 <?php
-// Agrega archivos de efectos y estetitca con JS
-function agrega_efectos_js() {
-    wp_enqueue_script(
-        'custom-script',
-        get_stylesheet_directory_uri() . '/js/effects.js',
-        array( 'jquery' ),
-        '1.0.0',
-        true
+// Agrega JS
+function agrega_js() {
+	    // Efectos visuales
+    wp_register_script(
+      'effects_js',
+      get_stylesheet_directory_uri() . '/js/effects.js',
+      array( 'jquery' ),
+      '1.0.0',
+      true
     );
+    wp_enqueue_script('effects_js');
+		
+		// Formulario con AJAX, con variable global de JS para URL
+    wp_register_script(
+      'ajax_form_js',
+      get_stylesheet_directory_uri() . '/js/ajax_form.js',
+      array( 'jquery' ),
+      '1.0.0',
+      true
+    );
+    wp_localize_script(
+		  'ajax_form_js',
+		  'varsGlobalesJS',
+		  array(
+		    'homeUrl' => esc_url(home_url())
+		  )
+		);
+    wp_enqueue_script('ajax_form_js');
+
 }
-add_action( 'wp_enqueue_scripts', 'agrega_efectos_js' );
+
+add_action( 'wp_enqueue_scripts', 'agrega_js' );
 ?>
 
 <?php
