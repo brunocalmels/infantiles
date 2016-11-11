@@ -110,6 +110,9 @@ i.fa {
 	text-transform: uppercase;
 	padding: 1em;
 }
+.primer_titulo_franja {
+	margin-top: 10px;
+}
 .org-rubro {
 	background-color: #9c4663;
 	border-radius: 10px;
@@ -142,12 +145,13 @@ div.formulario {
 	margin-left: auto;
 	margin-right: auto;
 }
-.org-formulario input, .org-formulario textarea {
+/*.org-formulario input, .org-formulario textarea {*/
+input[type=text], textarea {
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.52);
-	border-radius: 5px;
-	margin-bottom: 5px;
-	padding: 5px 10px;
+	background-color: rgba(255, 255, 255, 0.52) !important;
+	border-radius: 5px !important;
+	margin-bottom: 5px !important;
+	padding: 5px 10px !important;
 }
 .org-formulario input {
 	/*float: left;*/
@@ -165,10 +169,16 @@ div.formulario {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	width: 40em;
+}
+#org-submit-div input[type=text] {
+	width: 30em;
+	clear: both;
 }
 #org-submit {
   font-size: 150%;
   padding: 0.5em 1em;
+  width: 16em;
 }
 p.negro {
 	color: #111 !important;

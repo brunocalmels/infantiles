@@ -1,5 +1,4 @@
 
-- Buscar FA faltante (web, facebook)
 - Formulario de cada anunciante:
   - Hacer con JS q se borre 'Mensaje'
   - Chequear que el JS para q se cambie el texto a negro este bien
@@ -7,4 +6,7 @@
   - Campos obligatorios
   - Probar que ande el mail
 - Hacer que en el logo salga siempre la S más grande que las letras del medio.
+- Hacer JS para que haciendo clic en cualquier parte del cuadrado de los rubros se tickee el checkbox.
 - Arreglar la inclusion de subida_img.js para poder subir los logos.
+- Incluir captchas.
+- Chequear que el formulario se envíe bien.
