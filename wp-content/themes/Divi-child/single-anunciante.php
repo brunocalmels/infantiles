@@ -54,11 +54,12 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 									?>
 									<div class="auspiciante">
 										<a href=<?php the_permalink(); ?> >
+											<span class="align-helper"></span>
 											<img class="logo_auspiciante" src=<?php echo get_post_meta( get_the_ID(), '_logo_url', true );?> alt=<?php echo the_title();?> >
-											<div class="titulo_franja center">
-												<?php the_title(); ?>
-											</div>
 										</a>
+										<div class="titulo_franja center">
+											<?php the_title(); ?>
+										</div>
 									</div>
 									<?php
 								endwhile;

@@ -10,3 +10,10 @@
 - Arreglar la inclusion de subida_img.js para poder subir los logos.
 - Incluir captchas.
 - Chequear que el formulario se envíe bien.
+- Fixear los flex de auspiciantes para IE < 11.
+
+
+Fuente de información de anunciantes:
+- Auspiciantes (destacados): DESTACADOS BODAS.docx
+- Info de anunciantes: GUIA SERVICIOS BODAS 36.docx
+- Rubros y servicios: DISTRIBUCIÓN DE RUBROS BODAS 36.docx

@@ -14,23 +14,29 @@
 }
 #auspiciantes {
 	margin-bottom: 20px;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .auspiciante {
-	width: 30%;
+	/*width: 30%;*/
 	margin-left: auto;
 	margin-right: auto;
   border: 5px solid #fff;
+  -moz-flex-basis: 33.33%;
+  -webkit-flex-basis: 33.33%;
+	-ms-flex-basis: 33.33%;
+	flex-basis: 33.33%;
+  text-align: center;
 }
 .auspiciante a {
 	color: #111;
-	display: table;
-}
-.auspiciante a img {
-	max-width: 90%;
-	display: table-row;
-	margin-left: auto;
-	margin-right: auto;
+  white-space: nowrap;   
+  text-align: center;
+	display: inline-table;
 }
 #anunciante #an-nombre {
 	position: relative;
@@ -95,3 +101,36 @@
 .an-formulario textarea {
 	height: 5em;
 }
+
+
+/* Alineando las imágenes de los auspiciantes */
+.align-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Responsivititititityyyy */
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.auspiciante a {
+		height: 190px;
+    width: 170px;
+    /*margin: 1em 0;*/
+	}
+	.auspiciante a img {
+		max-height: 190px;
+    max-width: 170px;
+    vertical-align: middle;	
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
