@@ -34,6 +34,9 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 						?>
 
 						<!-- Auspiciantes -->
+						<div class="titulo_franja" id="titulo_auspiciantes">
+							<h1>Destacados</h1>
+						</div>
 						<div id="auspiciantes">
 							<?php
 								$args = array(
@@ -57,7 +60,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 											<span class="align-helper"></span>
 											<img class="logo_auspiciante" src=<?php echo get_post_meta( get_the_ID(), '_logo_url', true );?> alt=<?php echo the_title();?> >
 										</a>
-										<div class="titulo_franja center">
+										<div class="titulo_franja center cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">
 											<?php the_title(); ?>
 										</div>
 									</div>
@@ -113,7 +116,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 											if($telefono3 !== ''){
 												echo "<li class='an-item'><i class='fa fa-phone' aria-hidden='true'></i>" . $telefono3 . "</li>";
 											}
-											$email = get_post_meta( get_the_ID(), '_direccion', true );
+											$email = get_post_meta( get_the_ID(), '_email', true );
 											if($email !== ''){
 												echo "<li class='an-item'><i class='fa fa-envelope' aria-hidden='true'></i>" . $email . "</li>";
 											}

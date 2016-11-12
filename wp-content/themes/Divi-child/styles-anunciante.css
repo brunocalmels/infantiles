@@ -4,6 +4,13 @@
 	background-size: cover;
 	background-position: bottom left; 
 }
+#titulo_auspiciantes {
+	margin-bottom: 1em;
+	text-align: center;
+}
+#titulo_auspiciantes h1 {
+	padding-bottom: 0px;
+}
 #anunciante, #auspiciantes {
 	color: #111;
 	border-radius: 20px;
@@ -21,8 +28,11 @@
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.cliqueable {
+	cursor: pointer;
+}
 .auspiciante {
-	/*width: 30%;*/
+	background-color: rgba(255,255,255,0.4);
 	margin-left: auto;
 	margin-right: auto;
   border: 5px solid #fff;
@@ -86,6 +96,9 @@
 }
 .contacto-list li i {
 	color: #9c4663;
+}
+#an-nombre h1 {
+	padding-top: 10px;
 }
 .an-formulario input, .an-formulario textarea {
 	width: 100%;

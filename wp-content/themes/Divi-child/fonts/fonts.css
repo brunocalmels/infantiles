@@ -3,25 +3,34 @@
 	src: url('HighTower.ttf');  
 	font-weight: normal;  
 }
-@font-face {
+/*@font-face {
 	font-family: 'High Tower';  
 	src: url('HighTower-IT.ttf');  
 	font-style: italic;
-}
-/*@font-face {
-	font-family: 'High Tower';  
-	src: url('HighTower.ttf');  
+}*/
+@font-face {
+	font-family: 'Carlson Pro';  
+	src: url('ACaslonPro-Regular.otf');  
 	font-weight: normal;  
 }
 @font-face {
-	font-family: 'High Tower';  
-	src: url('HighTower.ttf');  
-	font-weight: normal;  
-}*/
+	font-family: 'Carlson Pro';  
+	src: url('ACaslonPro-Italic.otf');  
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Carlson Pro';  
+	src: url('ACaslonPro-Bold.otf');  
+	font-weight: bold;
+}
 
-body, input, textarea {
+body, input, textarea, #an-nombre h1 {
 	font-family: 'High Tower';
 }
 p, input, textarea {
 	font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Carlson Pro';
+	/*font-weight: bold;*/
 }

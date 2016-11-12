@@ -18,6 +18,13 @@
 /*
 	Bordó hover: #9c4663;
 */
+
+/* Saca la linea divisoria con el sidebar*/
+.container::before {
+	background-color: transparent;
+}
+
+
 .center {
 	text-align: center;
 }

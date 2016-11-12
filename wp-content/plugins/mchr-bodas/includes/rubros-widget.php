@@ -58,7 +58,7 @@ class mchr_rubros_widget extends WP_Widget {
 		echo $before_widget;
 		$title = apply_filters( 'widget_title', $instance['titulo'] );
 		if ( !empty( $title ) ) {
-			echo $before_title . esc_html( $title )	. $after_title;
+			//echo $before_title . esc_html( $title )	. $after_title;
 		};
 
 		?>
