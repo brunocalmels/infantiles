@@ -11,7 +11,7 @@
 #titulo_auspiciantes h1 {
 	padding-bottom: 0px;
 }
-#anunciante, #auspiciantes, #anunciantes-rubro {
+#anunciante, #auspiciantes, #anunciantes-rubro, #galeria {
 	color: #111;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.2);
@@ -129,6 +129,30 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+}
+
+/* Galeria */
+.et-image-slider {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0px !important;
+  background-color: transparent !important;
+}
+.et-image-slides {
+  background-color: transparent !important;
+}
+.et-image-slider, .et-image-slides, .et-image-overlay {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-o-box-shadow: none !important;
+	-ms-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* Para el editor*/
+.thumb {
+	max-width: 150px;
 }
 
 /* Responsivititititityyyy */

@@ -1,5 +1,6 @@
 <?php
 
+include_once('galeria.php');
 get_header();
 
 $show_default_title = get_post_meta( get_the_ID(), '_et_pb_show_title', true );
@@ -33,6 +34,8 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 						  do_action( 'et_before_content' );
 						?>
 
+						<?php
+						/*
 						<!-- Auspiciantes -->
 						<div class="titulo_franja" id="titulo_auspiciantes">
 							<h1>Destacados</h1>
@@ -43,11 +46,6 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 										'posts_per_page' => 3,
 										'orderby' => 'rand',
 										'post_type' => 'anunciante',
-										/*'tax_query' => array(
-											'taxonomy' => 'rubro',
-											'field' => 'name',
-											'terms' => $rubro
-										)*/
 										'meta_key' => '_auspiciante',
 										'meta_value' => '1'
 									);
@@ -70,6 +68,8 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 								wp_reset_postdata();						
 							?>
 						</div>
+						*/
+						?>
 						
 						<!-- Recuadro contenedor -->
 						<div id="anunciante">
@@ -150,6 +150,14 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 								</div>
 							</div> <!-- #an-datos -->
 						</div> <!-- #anunciante -->
+
+						<!-- Galería de imágenes-->
+						<div id="galeria">
+							<?php 
+								$res = galeria_anunciante( $post->ID, 230, 300 );
+								echo "<h1>" . $res . "</h1>";
+							?>
+						</div>
 						
 						<?php
 						  the_content();

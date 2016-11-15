@@ -1,5 +1,5 @@
 <?php
-// Añade una sección en Nueva Reparacion para los meta.
+// Añade una sección en Nueva anunciante para los meta.
 function anunciantes_meta_box_init() {
 	$id = 'anunciante_meta';
 	$title = 'Datos del anunciante';
@@ -10,19 +10,19 @@ function anunciantes_meta_box_init() {
 	//write_log("Hookeando la meta_box...");
 	add_meta_box($id, $title, $callback, $page, $context, $priority);
 }
-// Función para mostrar el meta_box para la reparacion.
-function anunciante_meta_box ( $reparacion, $box ) {
+// Función para mostrar el meta_box para la anunciante.
+function anunciante_meta_box ( $anunciante, $box ) {
 	// Retrieve the custom meta box values
-	$logo_url = get_post_meta( $reparacion->ID, '_logo_url', true );
-	$auspiciante = get_post_meta( $reparacion->ID, '_auspiciante', true );
-	$direccion = get_post_meta( $reparacion->ID, '_direccion', true );
-	$ciudad = get_post_meta( $reparacion->ID, '_ciudad', true );
-	$telefono1 = get_post_meta( $reparacion->ID, '_telefono1', true );
-	$telefono2 = get_post_meta( $reparacion->ID, '_telefono2', true );
-	$telefono3 = get_post_meta( $reparacion->ID, '_telefono3', true );
-	$email = get_post_meta( $reparacion->ID, '_email', true );
-	$web = get_post_meta( $reparacion->ID, '_web', true );
-	$facebook = get_post_meta( $reparacion->ID, '_facebook', true );
+	$logo_url = get_post_meta( $anunciante->ID, '_logo_url', true );
+	$auspiciante = get_post_meta( $anunciante->ID, '_auspiciante', true );
+	$direccion = get_post_meta( $anunciante->ID, '_direccion', true );
+	$ciudad = get_post_meta( $anunciante->ID, '_ciudad', true );
+	$telefono1 = get_post_meta( $anunciante->ID, '_telefono1', true );
+	$telefono2 = get_post_meta( $anunciante->ID, '_telefono2', true );
+	$telefono3 = get_post_meta( $anunciante->ID, '_telefono3', true );
+	$email = get_post_meta( $anunciante->ID, '_email', true );
+	$web = get_post_meta( $anunciante->ID, '_web', true );
+	$facebook = get_post_meta( $anunciante->ID, '_facebook', true );
 	// Nonce for security
 	wp_nonce_field( plugin_basename( __FILE__ ), 'anunciante_guardar_meta_box' );
 	?>
@@ -45,6 +45,36 @@ function anunciante_meta_box ( $reparacion, $box ) {
 	echo '<p>Email <input type="text" name="email" value="'.esc_attr( $email ).'" size="40" /></p>';
 	echo '<p>Facebook <input type="text" name="facebook" value="'.esc_attr( $facebook ).'" size="40" /></p>';
 	echo '<p>Sitio web <input type="text" name="web" value="'.esc_attr( $web ).'" size="40" /></p>';
+
+	?>
+	<div id="fotos_galeria">
+		<?php
+			   $args = array(
+        'posts_per_page' => 5,
+        'order'          => 'ASC',
+        'post_mime_type' => 'image',
+        'post_parent'    => $anunciante->ID,
+        'post_status'    => null,
+        'post_type'      => 'attachment',
+    );
+ 
+    $attachments = get_children( $args );
+ 
+    if ( $attachments ) {
+        foreach ( $attachments as $attachment ) {
+            $dims = array();
+            $dims[] = 150;
+            $dims[] = 150;
+            $image_attributes = wp_get_attachment_image_src( $attachment->ID, $dims );
+            echo '<img src="' . esc_url( $image_attributes[0] ) . '" class="foto_galeria" />';
+        }
+      }
+		?>
+		<a id="nueva_foto_upload" class="button">Agregar foto</a>
+		<!--<input type="hidden" id="nueva_foto_url" name="nueva_foto_url" value='<?php echo $nueva_foto_url ?>' /> -->
+	</div>
+
+	<?php
 }
 ?>
 

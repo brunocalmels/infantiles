@@ -29,7 +29,7 @@ function reg_anunciante_post_type () {
 		"menu_position" => 21,
 		"show_in_menu" => true,
 		//"show_in_menu_string" => "",
-		"supports" => ["title", "author"],
+		"supports" => ["title", "author", "editor"],
 		"taxonomies" => ['rubro']
 		);
 	register_post_type('anunciante', $args);
