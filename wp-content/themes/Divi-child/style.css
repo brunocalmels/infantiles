@@ -112,6 +112,24 @@ div.rubro div, div.rubro div img {
 	text-transform: uppercase;
 	color: #fff;
 }
+#main-footer ::-webkit-input-placeholder {
+   color: #eee;
+}
+
+#main-footer :-moz-placeholder { /* Firefox 18- */
+   color: #eee;  
+}
+
+#main-footer ::-moz-placeholder {  /* Firefox 19+ */
+   color: #eee;  
+}
+
+#main-footer :-ms-input-placeholder {  
+   color: #eee;  
+}
+#main-footer input[placeholder] {
+	color: #eee;
+}
 i.fa {
 	margin-right: 0.5em;
 }
