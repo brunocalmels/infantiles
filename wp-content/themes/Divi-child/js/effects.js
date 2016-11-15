@@ -28,5 +28,25 @@
 				$(this).html('');
 			}
 		});
+		$("li.widget2").on({
+			mouseenter: function(){
+				$(this).toggleClass("resaltada");
+				$(this).find(".nombre").toggleClass("resaltada");
+
+		    var img = $(this).find("img");
+		    var newSource = img.data('alt-src');
+		    img.data('alt-src', img.attr('src'));
+		    img.attr('src', newSource);
+	  },
+			mouseleave: function(){
+				$(this).toggleClass("resaltada");
+				$(this).find(".nombre").toggleClass("resaltada");
+
+		    var img = $(this).find("img");
+		    var newSource = img.data('alt-src');
+		    img.data('alt-src', img.attr('src'));
+		    img.attr('src', newSource);
+			}
+		});
 	});
 })(jQuery);

@@ -63,15 +63,68 @@ class mchr_rubros_widget extends WP_Widget {
 
 		?>
 	    <ul>
+
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/moda">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/moda_small_hover.png' alt="Moda" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/moda_small.png'>
+						<div class='nombre'>Moda</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/gastronomia">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/gastronomia_small_hover.png' alt="Gastronomía" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/gastronomia_small.png'>
+						<div class='nombre'>Gastronomía</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/salones-y-decoracion">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/salones_deco_small_hover.png' alt="Salones y decoración" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/salones_deco_small.png'>
+						<div class='nombre'>Salones y decoración</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/animacion">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/animacion_small_hover.png' alt="Animación" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/animacion_small.png'>
+						<div class='nombre'>Animación</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/estetica">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/estetica_small_hover.png' alt="Estética" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/estetica_small.png'>
+						<div class='nombre'>Estética</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/fotografia-video-filmacion">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/fotografia_small_hover.png' alt="Fotografía - video - filmación" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/fotografia_small.png'>
+						<div class='nombre'>Fotografía - video - filmación</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/organizacion-de-eventos">
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/organizacion_small_hover.png' alt="Organización de eventos" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/organizacion_small.png'>
+						<div class='nombre'>Organización de eventos</div>
+					</a>
+				</li>
+				<li class="widget2 cat-item">
+					<a href="http://localhost/bodas/rubro/otros-servicios"s>
+						<img src='http://localhost/bodas/wp-content/uploads/2016/11/otros_small_hover.png' alt="Otros servicios" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/otros_small.png'>
+						<div class='nombre'>Otros servicios</div>
+					</a>
+				</li>
+
 		<?php
+		/*
       $cat_args['title_li'] = '';
       $cat_args['taxonomy'] = 'rubro';
       $cat_args['depth'] = 1;
       $cat_args['hide_empty'] = false;
 
       wp_list_categories( apply_filters( 'widget_categories_args', $cat_args ) );
-?>
-        </ul>
+      */
+      ?>
+      
+      </ul>
 <?php
 		 echo $after_widget;
 	}

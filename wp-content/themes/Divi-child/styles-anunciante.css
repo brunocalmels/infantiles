@@ -32,14 +32,15 @@
 	cursor: pointer;
 }
 .auspiciante {
+	position: relative;
 	background-color: rgba(255,255,255,0.4);
 	margin-left: auto;
 	margin-right: auto;
   border: 5px solid #fff;
-  -moz-flex-basis: 33.33%;
-  -webkit-flex-basis: 33.33%;
-	-ms-flex-basis: 33.33%;
-	flex-basis: 33.33%;
+  -moz-flex-basis: 30%;
+  -webkit-flex-basis: 30%;
+	-ms-flex-basis: 30%;
+	flex-basis: 30%;
   text-align: center;
 }
 .auspiciante a {

@@ -3,3 +3,63 @@
 	background-size: cover;
 	background-position: bottom left; 
 }
+
+.nombre_anunciante {
+	font-family: 'Carlson Pro';
+}
+.nombre_anunciante span {
+	font-style: italic;
+}
+
+.ribbon-wrapper {
+	height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+.featured-ribbon {
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+	/*left: 31px;
+  top: 14px;
+  width: 120px;*/
+	left: 26px;
+  top: 10px;
+  width: 110px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #f5e254, #d7b30d); 
+  background-image:    -moz-linear-gradient(top, #f5e254, #d7b30d); 
+  background-image:     -ms-linear-gradient(top, #f5e254, #d7b30d); 
+  background-image:      -o-linear-gradient(top, #f5e254, #d7b30d); 
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.featured-ribbon:before, .featured-ribbon:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px;
+}
+
+.featured-ribbon:before {
+  left: 0;
+}
+.featured-ribbon:after {
+  right: 0;
+}​

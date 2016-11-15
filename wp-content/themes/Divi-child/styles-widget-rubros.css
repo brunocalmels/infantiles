@@ -6,12 +6,13 @@
 	background-color: rgba(255,255,255,0.9);
 	border-radius: 15px;
 	text-transform: uppercase;
-	padding-bottom: 10px;
-  overflow: hidden; /* Para que no se muestre el texto que sobra */
+	/*padding-bottom: 10px;*/
+  /*overflow: hidden; /* Para que no se muestre el texto que sobra */
 }
 .cat-item a {
 	color: #9c4663;
-	white-space: nowrap; /* Para que no haga dos lineas */
+	padding: 5px;
+	/*white-space: nowrap; /* Para que no haga dos lineas */
 }
 .cat-item a:before {
 	position: relative;
@@ -19,6 +20,30 @@
   margin-left: 10px;
 	top: 10px;
 }
+.cat-item a img {
+	vertical-align: middle;
+}
+.cat-item a {
+	/*display: table-row;*/
+	display: flex;
+	align-items: center;
+}
+.cat-item a img, .cat-item a div {
+	/*display: table-cell;*/
+	/*text-transform: none;*/
+}
+li.widget2, li.widget2 a img, li.widget2 a div {
+	transition-duration: 0.4s;
+}
+.cat-item.resaltada {
+	background-color: #9c4663;
+}
+.cat-item .nombre.resaltada {
+	color: #fff;
+}
+
+
+/* Links particulares */
 .cat-item-3 a:before {
 	content: url('http://localhost/bodas/wp-content/uploads/2016/11/moda_small_hover.png');
 }
