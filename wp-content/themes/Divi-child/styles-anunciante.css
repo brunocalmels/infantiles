@@ -11,7 +11,7 @@
 #titulo_auspiciantes h1 {
 	padding-bottom: 0px;
 }
-#anunciante, #auspiciantes {
+#anunciante, #auspiciantes, #anunciantes-rubro {
 	color: #111;
 	border-radius: 20px;
 	background-color: rgba(255,255,255,0.2);
@@ -19,7 +19,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-#auspiciantes {
+#auspiciantes, #anunciantes-rubro {
 	margin-bottom: 20px;
   padding: 20px;
   display: flex;
@@ -114,7 +114,14 @@
 .an-formulario textarea {
 	height: 5em;
 }
-
+.resaltado {
+	font-weight: bold;
+	font-size: 120%;
+}
+.rubro {
+	text-transform: none;
+	display: block;
+}
 
 /* Alineando las imágenes de los auspiciantes */
 .align-helper {

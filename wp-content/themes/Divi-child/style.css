@@ -12,7 +12,8 @@
 @import url("fonts/fonts.css");
 @import url("styles-anunciante.css");
 @import url("styles-widget-rubros.css");
- 
+@import url("styles-taxonomy-rubro.css");
+
 /* Theme customization starts here
 ------------------------------------------------------- */
 /*
@@ -21,9 +22,8 @@
 
 /* Saca la linea divisoria con el sidebar*/
 .container::before {
-	background-color: transparent;
+	background-color: transparent !important;
 }
-
 
 .center {
 	text-align: center;
@@ -58,7 +58,7 @@
 	padding-left: 1em;
 } 
 
-/* Rubros */
+/* Rubros en la homepage */
 div.rubro {
 	border-radius: 10px;
 	display: flex;
@@ -66,6 +66,7 @@ div.rubro {
   background-size: cover;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 div.rubro div.hover {
 	position: absolute;
@@ -108,6 +109,7 @@ div.rubro div, div.rubro div img {
 	margin-top: -30px;
 }
 #main-footer h4 {
+	text-transform: uppercase;
 	color: #fff;
 }
 i.fa {

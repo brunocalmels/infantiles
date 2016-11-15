@@ -9,7 +9,7 @@ function theme_enqueue_styles() {
 <?php
 // Agrega JS
 function agrega_js() {
-	    // Efectos visuales
+    // Efectos visuales
     wp_register_script(
       'effects_js',
       get_stylesheet_directory_uri() . '/js/effects.js',
@@ -19,6 +19,23 @@ function agrega_js() {
     );
     wp_enqueue_script('effects_js');
 		
+    // Links con JS
+    wp_register_script(
+      'links_js',
+      get_stylesheet_directory_uri() . '/js/links.js',
+      array( 'jquery' ),
+      '1.0.0',
+      true
+    );
+    wp_localize_script(
+		  'links_js',
+		  'varsGlobalesJS',
+		  array(
+		    'homeUrl' => esc_url(home_url())
+		  )
+		);
+    wp_enqueue_script('links_js');
+
 		// Formulario con AJAX, con variable global de JS para URL
     wp_register_script(
       'ajax_form_js',

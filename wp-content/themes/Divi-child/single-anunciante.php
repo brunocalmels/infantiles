@@ -40,7 +40,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 						<div id="auspiciantes">
 							<?php
 								$args = array(
-										'posts_per_page' => 6,
+										'posts_per_page' => 3,
 										'orderby' => 'rand',
 										'post_type' => 'anunciante',
 										/*'tax_query' => array(
@@ -60,7 +60,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 											<span class="align-helper"></span>
 											<img class="logo_auspiciante" src=<?php echo get_post_meta( get_the_ID(), '_logo_url', true );?> alt=<?php echo the_title();?> >
 										</a>
-										<div class="titulo_franja center cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">
+										<div class="titulo_franja center cliqueable resaltado" onclick="window.location.href = '<?php the_permalink(); ?>'">
 											<?php the_title(); ?>
 										</div>
 									</div>

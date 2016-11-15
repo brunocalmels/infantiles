@@ -56,18 +56,32 @@ function mchr_registrar_widgets() {
 
 // Shortcode para el formulario de contacto
 add_shortcode( 'formulario', 'formulario_shortcode' );
-function formulario_shortcode() {
+function formulario_shortcode( $atts ) {
+	extract( shortcode_atts( array('locacion' => 'body' // set attribute default
+), $atts ) );
+
 	$ret = '<form class="org-formulario" action="#">';
-	$ret .= wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
-	$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_1">';
-		$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
-		$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
-		$ret .= '<input type="text" name="email" placeholder="Email" />';
-	$ret .= '</div>';
-	$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
-		$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
-		$ret .= '<input type="submit" name="enviar" value="Enviar">';
-	$ret .= '</div>';
+		$ret .= wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
+
+		if( $locacion === 'footer' ) {
+			$ret .= '<div class="">';
+		}
+		else {
+			$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_1">';
+		}
+			$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
+			$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
+			$ret .= '<input type="text" name="email" placeholder="Email" />';
+		$ret .= '</div>';
+		if( $locacion === 'footer' ) {
+			$ret .= '<div class="">';
+		}
+		else {
+			$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
+			$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
+		}
+			$ret .= '<input type="submit" name="enviar" value="Enviar">';
+		$ret .= '</div>';
 	$ret .= '</form>';
 	return $ret;
 }
