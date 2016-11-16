@@ -1,4 +1,4 @@
-function enviarMail(nombre, email, tel, lista) {
+function enviarMail(chequeo, nombre, email, tel, mensaje, lista) {
 	var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -8,20 +8,21 @@ function enviarMail(nombre, email, tel, lista) {
         	alert("No se pudo enviar el formulario. Por favor, comunicate con nosotros telefónicamente y te atenderemos con gusto.");
       }
   };
-  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?nombre=" + nombre + "&email=" + email + "&tel=" + tel + "&rubros=" + lista, true);
+  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?chequeo=" + chequeo + "&nombre=" + nombre + "&email=" + email + "&tel=" + tel + "&mensaje" + mensaje + "&rubros=" + lista, true);
   ajax.send();
 }
 
 (function($) {
 	$(document).ready(function(){
-
-		$('#org-submit').on({
+		$('#org-submit-div input[type=submit]').on({
 			click: function(e){
 				e.preventDefault();
 				// Validacion de campos de contacto completos
-				var email  = $('#org-email')[0].value;
-				var tel    = $('#org-tel')[0].value;
-				var nombre = $('#org-nombre')[0].value;
+				var email  = $('#email')[0].value;
+				var tel    = $('#telefono')[0].value;
+				var nombre = $('#nombre')[0].value;
+				var mensaje = $('#mensaje')[0].value;
+				var chequeo = $('#chequeo')[0].value;
 				if (nombre == '' || nombre == null) {
 					alert('Por favor incluí un nombre.');
 					return;
@@ -37,7 +38,7 @@ function enviarMail(nombre, email, tel, lista) {
 						lista += rubros[i].value + ' ';
 					}
 				}
-				enviarMail(nombre, email, tel, lista);
+				enviarMail(chequeo, nombre, email, tel, mensaje, lista);
 			}
 		}
 

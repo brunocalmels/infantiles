@@ -54,14 +54,28 @@ function mchr_registrar_widgets() {
 	register_widget( 'mchr_rubros_widget' );
 }
 
+// Shortxode dummy para agregar 8 badges
+add_shortcode( 'badges', 'badges_shortcode' );
+function badges_shortcode( $atts ) {
+	for($i=0; $i<8; $i++) {
+		?>
+		<div class="et_pb_text_align_center org-rubro">
+			<img src="http://localhost/bodas/wp-content/uploads/2016/11/moda_icono-150x150.png" alt="moda_icono" width="150" height="150" class="alignnone size-thumbnail wp-image-100">
+			<input class="org-check" type="checkbox" name="moda" value="Moda">
+			<p>Moda</p>
+		</div>
+	<?php
+	}
+}
+
 // Shortcode para el formulario de contacto
 add_shortcode( 'formulario', 'formulario_shortcode' );
 function formulario_shortcode( $atts ) {
 	extract( shortcode_atts( array('locacion' => 'body' // set attribute default
 ), $atts ) );
 
-	$ret = '<form class="org-formulario" action="#">';
-		$ret .= wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
+	$ret = '<form class="org-formulario" action="' . home_url() . '/form-organizar.php" >';
+		$ret .= wp_nonce_field( 'contacto_anunciante', 'chequeo' );
 
 		if( $locacion === 'footer' ) {
 			$ret .= '<div class="">';
@@ -69,16 +83,16 @@ function formulario_shortcode( $atts ) {
 		else {
 			$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_1">';
 		}
-			$ret .= '<input type="text" name="nombre" placeholder="Nombre" />';
-			$ret .= '<input type="text" name="telefono" placeholder="Teléfono" />';
-			$ret .= '<input type="text" name="email" placeholder="Email" />';
+			$ret .= '<input type="text" name="nombre" id="nombre" placeholder="Nombre" />';
+			$ret .= '<input type="text" name="telefono" id="telefono" placeholder="Teléfono" />';
+			$ret .= '<input type="text" name="email" id="email" placeholder="Email" />';
 		$ret .= '</div>';
 		if( $locacion === 'footer' ) {
 			$ret .= '<div class="">';
 		}
 		else {
 			$ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
-			$ret .= '<textarea name="mensaje" onclick="">Mensaje</textarea>';
+			$ret .= '<textarea name="mensaje" id="mensaje" onclick="">Mensaje</textarea>';
 		}
 			$ret .= '<input type="submit" name="enviar" value="Enviar">';
 		$ret .= '</div>';

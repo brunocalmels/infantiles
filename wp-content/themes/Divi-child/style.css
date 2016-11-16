@@ -146,17 +146,25 @@ i.fa {
 .org-rubro {
 	background-color: #9c4663;
 	border-radius: 10px;
-  padding: 10px;
+  padding: 10px !important;
+  /* A partir de aca, para badges chiquitas */
+  display: inline-block;
+  position: relative;
+  margin: 10px;
 }
 .org-rubro p {
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 150%;
+	font-size: 90%;
+	color: #fff;
+}
+.org-rubro img {
+	/*max-width: 50%;*/
 }
 .org-check {
 	position: absolute;
-	right: 5%;
-	top: 5%;
+	right: 10px;
+	top: 10px;
   /* Double-sized Checkboxes */
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
@@ -202,7 +210,7 @@ input[type=text], textarea {
 	width: 40em;
 }
 #org-submit-div input[type=text] {
-	width: 30em;
+	/*width: 30em; */
 	clear: both;
 }
 #org-submit {
@@ -241,10 +249,22 @@ p.negro {
 @media (min-width: 544px) {  }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+	div#org-rubros {
+		display: flex;
+	}
+	.org-rubro {
+    width: 11%;
+	}
+	.org-rubro img {
+		width: 75px;
+		height: 75px;	
+	}
+}
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  }

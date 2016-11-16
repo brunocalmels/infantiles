@@ -153,15 +153,20 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 
 						<!-- Galería de imágenes-->
 						<div id="galeria">
+						<h2>Galería</h2>
 							<?php 
 								$res = galeria_anunciante( $post->ID, 230, 300 );
-								echo "<h1>" . $res . "</h1>";
+								if( $res === '0' ) {
+									echo "No hay fotos en la galería.";
+								}
 							?>
-						</div>
-						
+							
 						<?php
-						  the_content();
+						  //the_content();
 
+						?>
+						</div>
+						<?php
 						  wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'Divi' ), 'after' => '</div>' ) );
 						?>
 					</div><!-- .entry-content -->

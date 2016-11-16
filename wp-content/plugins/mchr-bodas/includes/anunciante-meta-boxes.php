@@ -27,6 +27,7 @@ function anunciante_meta_box ( $anunciante, $box ) {
 	wp_nonce_field( plugin_basename( __FILE__ ), 'anunciante_guardar_meta_box' );
 	?>
 	<div class="logo_upload">
+		<h2>Logo</h2>
 		<img id="logo_img" src="<?php echo $logo_url; ?>" width="150">
 		<a id="img_upload" class="button">Elegir imagen</a>
 		<input type="hidden" id="logo_url" name="logo_url" value='<?php echo $logo_url ?>' />
@@ -81,7 +82,6 @@ function anunciante_meta_box ( $anunciante, $box ) {
         }
       }
 		?>
-			
 		</div>
 	</div>
 
