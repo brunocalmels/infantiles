@@ -48,30 +48,41 @@ function anunciante_meta_box ( $anunciante, $box ) {
 
 	?>
 	<div id="fotos_galeria">
+		<h2>Galería</h2>
+		<a id="nueva_foto_upload" class="button">Agregar foto</a>
+		<div id="fotos">
 		<?php
 			   $args = array(
-        'posts_per_page' => 5,
+        'posts_per_page' => -1,
         'order'          => 'ASC',
         'post_mime_type' => 'image',
-        'post_parent'    => $anunciante->ID,
         'post_status'    => null,
         'post_type'      => 'attachment',
+        'meta_query'     => array(
+        	array(
+						'key' => '_en_galeria_de',
+						'value' => $anunciante->ID
+	        	)
+        	)
     );
  
-    $attachments = get_children( $args );
+    $attachments = get_posts( $args );
  
     if ( $attachments ) {
+    		$contador = 0;
         foreach ( $attachments as $attachment ) {
-            $dims = array();
-            $dims[] = 150;
-            $dims[] = 150;
-            $image_attributes = wp_get_attachment_image_src( $attachment->ID, $dims );
-            echo '<img src="' . esc_url( $image_attributes[0] ) . '" class="foto_galeria" />';
+      		$contador += 1;
+          $dims = array();
+          $dims[] = 150;
+          $dims[] = 150;
+          $image_attributes = wp_get_attachment_image_src( $attachment->ID, $dims );
+          echo '<img src="' . esc_url( $image_attributes[0] ) . '" class="thumb" id="img-' . $attachment->ID . '" data-cont="' . $contador . '" />';
+          echo "<a class='button borrar_ya_en_galeria' href='#' data-id='" . $attachment->ID . "'>X</a>";
         }
       }
 		?>
-		<a id="nueva_foto_upload" class="button">Agregar foto</a>
-		<!--<input type="hidden" id="nueva_foto_url" name="nueva_foto_url" value='<?php echo $nueva_foto_url ?>' /> -->
+			
+		</div>
 	</div>
 
 	<?php
@@ -98,6 +109,15 @@ function anunciante_guardar_meta_box( $post_id ) {
 		update_post_meta( $post_id, '_email', sanitize_text_field( $_POST['email'] ) );
 		update_post_meta( $post_id, '_web', sanitize_text_field( $_POST['web'] ) );
 		update_post_meta( $post_id, '_facebook', sanitize_text_field( $_POST['facebook'] ) );
+	
+		// Setea el parent_post al correspondiente para que aparezcan en la galería
+		foreach( $_POST['galeria'] as $foto_id ) {
+			update_post_meta( $foto_id, '_en_galeria_de', $post_id );
+		}
+		// Remueve en el caso de que se saquen fotos que ya estaban
+		foreach( $_POST['remover'] as $foto_id ) {
+			update_post_meta( $foto_id, '_en_galeria_de', '' );
+		}
 	}
 }
 ?>

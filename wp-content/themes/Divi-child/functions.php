@@ -75,6 +75,17 @@ add_action( 'admin_enqueue_scripts', 'agrega_admin_js' );
 ?>
 
 <?php
+function agrega_admin_styles_css() {
+	wp_register_style(
+		'admin_styles_css',
+		get_stylesheet_directory_uri() . '/admin-styles.css'
+	);
+	wp_enqueue_style( 'admin_styles_css' );
+}
+add_action( 'admin_enqueue_scripts', 'agrega_admin_styles_css' );
+?>
+
+<?php
 // Agrega Font Awesome para los iconos.
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 function enqueue_load_fa() {

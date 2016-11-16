@@ -44,9 +44,10 @@
 					var alt = itemJ.title;
 					console.log('Id: ' + itemJ.id + ' - URL: ' + url + ' - alt: ' + alt);
 					// Crea un elemento nodo img con esta foto
-					var foto = "<img src='" + url + "'' alt='" + alt + "' class='thumb'/>";
-					var hid = "<input type='hidden' name='galeria[" + index + "]' value='" + id + "'/>";
-					$('#fotos_galeria').prepend(foto, hid);
+					var foto = "<img src='" + url + "'' alt='" + alt + "' id='img-" + id + "'  class='thumb'/>";
+					var hid = "<input type='hidden' id='hid-" + id + "' name='galeria[" + index + "]' value='" + id + "'/>";
+					var borrar = "<a class='button borrar' href='#' data-id='" + id + "'>X</a>";
+					$('#fotos').append(foto, hid, borrar);
 				});
 		  })
 		  .on('close', function() {
@@ -58,9 +59,29 @@
 			.open();
 		});
 
+		// Borra una imagen que se iba a poner en la galería
+		$("#fotos").on( 'click', '.borrar', function(e) {
+			e.preventDefault();
+			var id = $(this).data('id');
+			console.log('Id: ' + id);
+			$(this).parent().find('#img-' + id).remove();
+			$(this).parent().find('#hid-' + id).remove();
+			$(this).remove();
+		});
+
+			// Borra una imagen que ya estaba en la galería
+			$("#fotos").on( 'click', '.borrar_ya_en_galeria', function(e) {
+			e.preventDefault();
+			var id = $(this).data('id');
+			console.log('Id: ' + id);
+			var img = $(this).parent().find('#img-' + id);
+			var contador = img.data('cont');
+			console.log('Contador: ' + contador);
+			img.remove();
+			var hid = "<input type='hidden' id='hid-" + id + "' name='remover[" + contador + "]' value='" + id + "'/>";
+			$('#fotos').append(hid);
+			$(this).remove();
+		});
+
 	});
 })(jQuery);
-
-
-
-// Falta enqueuear el estil para que salgan como .thumb en backend admin, y agregarle el post_parent en anunciante_guardar_meta_box().
