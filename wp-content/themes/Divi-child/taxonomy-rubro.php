@@ -64,7 +64,7 @@
 						<div class="auspiciante">
 							<?php if( $ausp ) :
 							?>
-								<div class="ribbon-wrapper">
+								<div class="ribbon-wrapper cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">
 									<div class="featured-ribbon">
 										Destacado
 									</div>

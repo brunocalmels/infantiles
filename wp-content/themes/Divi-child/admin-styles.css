@@ -1,0 +1,16 @@
+/* Para el editor de galería */
+.thumb {
+	max-width: 150px;
+	margin-left: 15px;
+	margin-top: : 15px;
+	margin-bottom: 15px;
+}
+.borrar {
+	margin-right: 15px;
+}
+h2 {
+	font-size: 20px;
+}
+#nueva_foto_upload {
+	margin-bottom: 20px;
+}

@@ -52,9 +52,41 @@ function agrega_js() {
 		  )
 		);
     wp_enqueue_script('ajax_form_js');
+
+    // Magnific Popup
+    wp_register_script(
+			'magnific_popup_js',
+			get_stylesheet_directory_uri() . '/js/third_party/magnific-popup.js',
+			array( 'jquery' ),
+			'1.0.0',
+			true
+    );
+    wp_enqueue_script('maginfic_popup_js');
+
+    // Popups para imagenes
+    wp_register_script(
+			'popup_imgs_js',
+			get_stylesheet_directory_uri() . '/js/popup_imgs.js',
+			array( 'magnific_popup_js' ),
+			'1.0.0',
+			true
+    );
+    wp_enqueue_script('popup_imgs_js');
 }
 
 add_action( 'wp_enqueue_scripts', 'agrega_js' );
+?>
+
+<?php
+	// Agrega estilos de Magnific Popup
+	function agrega_magnific_popup_css() {
+		wp_register_style(
+			'magnific_popup_css',
+			get_stylesheet_directory_uri() . '/third_party/magnific-popup.css'
+		);
+		wp_enqueue_style( 'magnific_popup_css' );
+	}
+	add_action( 'wp_enqueue_scripts', 'agrega_magnific_popup_css' );
 ?>
 
 <?php
