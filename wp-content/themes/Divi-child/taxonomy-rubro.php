@@ -11,6 +11,22 @@
 					<h1><?php echo single_term_title(); ?></h1>
 				</div>
 
+				<!-- Filtros por subrubros -->
+				<?php
+					$args['taxonomy'] = 'rubro';
+					$args['depth'] = 1;
+					$args['hide_empty'] = true;
+					$args['parent_term'] = $term->ID;
+					$args['format'] = 'list';				// Probar un format que devuelva links
+					$args['echo'] = false;
+
+					$subrubros = wp_list_categories( apply_filters( 'widget_categories_args', $args ) );
+					
+					foreach( $subrubro as $subr ) {
+							echo '<a href=' . home_url() . '/rubro/' . $subr->slug . ' class="boton-filtro" >'$subr . '</a>';
+					}
+				?>
+
 				<?php /*
 				<div id="auspiciantes">
 					<?php
@@ -53,7 +69,7 @@
 				
 				<div id="anunciantes-rubro">
 					<?php
-					// Busqueda de los del rubro, que no son destacados
+					// Anunciantes del rubro
 					while ( have_posts() ) :
 					  the_post();
 						$ausp = false;

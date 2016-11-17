@@ -71,6 +71,13 @@ function agrega_js() {
 			'1.0.0',
 			true
     );
+    wp_localize_script(
+		  'popup_imgs_js',
+		  'varsGlobalesJS',
+		  array(
+		    'homeUrl' => esc_url(home_url())
+		  )
+		);
     wp_enqueue_script('popup_imgs_js');
 }
 

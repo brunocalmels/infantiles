@@ -1,4 +1,4 @@
-.tax-rubro #main-content {
+.tax-rubro #main-content, .search #main-content {
 	background-image: url('http://localhost/bodas/wp-content/uploads/2016/11/fondo_rubros.jpg');
 	background-size: cover;
 	background-position: bottom left; 

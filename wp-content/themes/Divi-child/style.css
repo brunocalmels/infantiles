@@ -28,8 +28,42 @@
 .center {
 	text-align: center;
 }
+/* Popup */
+#popup_wrapper {
+	position: fixed;
+	top: 150px;
+	right: -700px;
+	color: #111;
+	background-color: #f5e254;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	padding: 2em;
+	text-align: center;
+	transition-duration: 0.5s; 
+}
+#popup_wrapper p {
+	font-family: 'Carlston Pro';
+}
+#popup_wrapper a {
+	font-size: 120%;
+	color: #9c4663;
+	text-transform: none;
+}
+#popup_close {	
+	cursor: pointer;
+	position: absolute;
+	top: -25px;
+	left: -20px;
+	font-weight: bold;
+	color: #fff;
+	font-size: 200%;
+	/*border: 1px solid #111;
+	border-radius: 50%;*/
+}
+
+/* Header */
 #encabezado {
-	width: 35%;
+	width: 40%;
 	/* IE Fix:
 	display: table; */
 	display: flex;
@@ -82,13 +116,14 @@ div.rubro div.icono {
 }
 div.rubro div.icono img {
 	max-width: 50%;
-	margin: 50px 20%;
+	margin: 30px 20% 80px 20%;
 }
 
 div.rubro div.nombre {
 	text-transform: uppercase;
-	font-size: 150%;
+	font-size: 200%;
 	color: #9c4663;
+	padding: 0.2em;
 	background-color: #fff;
 	text-align: center;
 	width: 100%;
