@@ -65,16 +65,25 @@
 	font-size: 80%;
 }
 #anunciante #an-datos {
-	display: flex;
 	position: relative;
   top: 20px;
 }
+@media (min-width: 992px) {
+	#anunciante #an-datos {
+		display: flex;
+	}
+	#anunciante #an-datos div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+} 
 #anunciante #an-datos div {
   margin: 20px;
   padding: 10px;
 	background-color: rgba(246, 233, 233, 0.52);
 	border-radius: 10px;
 }
+max-wi
 #anunciante #an-datos div h3 {	
 	text-align: center;
 }

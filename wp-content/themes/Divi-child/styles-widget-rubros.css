@@ -14,6 +14,12 @@
 	padding: 5px;
 	/*white-space: nowrap; /* Para que no haga dos lineas */
 }
+@media (max-width: 992px) {	
+	li.cat-item a {
+		justify-content: center;
+	}
+}
+
 .cat-item a:before {
 	position: relative;
   margin-right: 10px;

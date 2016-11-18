@@ -40,7 +40,15 @@
 	padding: 2em;
 	text-align: center;
 	transition-duration: 0.5s; 
+	z-index: 200;
 }
+@media (max-width: 500px) {
+	#popup_wrapper {
+		width: 300px;
+		right: 0;
+	}
+}
+
 #popup_wrapper p {
 	font-family: 'Carlston Pro';
 }
@@ -63,11 +71,18 @@
 
 /* Header */
 #encabezado {
-	width: 40%;
-	/* IE Fix:
-	display: table; */
-	display: flex;
 	align-items: center;
+}
+@media (min-width: 544px) {
+	#encabezado {
+		width: 40%;
+		/* IE Fix:
+		display: table; */
+		display: flex;
+	}
+	#subt_header {
+		border-left: 2px solid #fff;
+	}
 }
 #encabezado div {
 	/* IE Fix:
@@ -88,9 +103,20 @@
 	color: #fff;
 	text-transform: uppercase;
 	width: 45%;
-	border-left: 2px solid #fff;
 	padding-left: 1em;
 } 
+#subt_header p {
+  word-wrap: normal;
+}
+@media (max-width: 544px) {
+	#bodas_header {
+    padding-bottom: 1em;
+	}
+	#subt_header {
+    padding-top: 1em;
+		border-top: 2px solid #fff;
+	}
+}
 
 /* Rubros en la homepage */
 div.rubro {
@@ -242,7 +268,7 @@ input[type=text], textarea {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	width: 40em;
+	/*width: 40em;*/
 }
 #org-submit-div input[type=text] {
 	/*width: 30em; */
@@ -266,7 +292,6 @@ p.negro {
 	margin-right: auto;
 }
 #contenedor-contacto {
-	width: 50%;
 	/* IE Fix:
 	display: table; */
 	display: flex;
@@ -281,7 +306,11 @@ p.negro {
 
 /* Responsivititititityyyy */
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  }
+@media (min-width: 544px) {
+	#contenedor-contacto {
+		width: 50%;
+	}
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
@@ -299,7 +328,7 @@ p.negro {
 		height: 75px;	
 	}
 }
-}
+
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  }

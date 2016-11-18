@@ -46,7 +46,11 @@ function reg_rubro_tax () {
 		'edit_item' => 'Editar rubro',
 		'view_item' => 'Ver rubro',
 		'add_new_item' => 'Agregar nuevo rubro',
-		'new_item_name' => 'Nombre del nuevo rubro'
+		'new_item_name' => 'Nombre del nuevo rubro',
+		'parent_item' => 'Rubro superior',
+		'parent_item_colon' => 'Rubro superior:',
+		'update_item' => 'Rubro actualizado',
+		'menu_name' => 'Rubros'
 		);
 	$args = array(
 			'hierarchical' => true,

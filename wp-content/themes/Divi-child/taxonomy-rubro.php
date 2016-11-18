@@ -23,7 +23,7 @@
 					$subrubros = wp_list_categories( apply_filters( 'widget_categories_args', $args ) );
 					
 					foreach( $subrubro as $subr ) {
-							echo '<a href=' . home_url() . '/rubro/' . $subr->slug . ' class="boton-filtro" >'$subr . '</a>';
+							echo '<a href=' . home_url() . '/rubro/' . $subr->slug . ' class="boton-filtro" >' . $subr . '</a>';
 					}
 				?>
 
