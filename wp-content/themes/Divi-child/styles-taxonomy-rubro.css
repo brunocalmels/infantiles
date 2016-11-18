@@ -63,3 +63,12 @@
 .featured-ribbon:after {
   right: 0;
 }​
+
+ul#subrubros.nostyle {
+	list-style: none;
+	display: flex;
+}
+#subrubros li {
+	padding: 5px;
+	margin: 5px; 
+}

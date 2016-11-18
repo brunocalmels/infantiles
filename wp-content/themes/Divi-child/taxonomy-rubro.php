@@ -13,21 +13,32 @@
 
 				<!-- Filtros por subrubros -->
 				<?php
-					$args['taxonomy'] = 'rubro';
-					$args['depth'] = 1;
-					$args['hide_empty'] = true;
-					$args['parent_term'] = $term->ID;
-					$args['format'] = 'list';				// Probar un format que devuelva links
-					$args['echo'] = false;
+					$term_o = get_term_by( 'slug', $term, 'rubro' );
+					if( intval($term_o->parent) === 0 ) {
+						$args['taxonomy'] = 'rubro';
+						$args['depth'] = 1;
+						$args['hide_empty'] = true;
+						$args['child_of'] = $term_o->term_id;
+						$args['style'] = 'list';				// Probar un format que devuelva links
+						$args['echo'] = true;
+						$args['title_li'] = false;
+					?>
+					<ul id="subrubros" class="nostyle">
+					<?php
+						$subrubros = wp_list_categories( apply_filters( 'widget_categories_args', $args ) );
 
-					$subrubros = wp_list_categories( apply_filters( 'widget_categories_args', $args ) );
-					
-					foreach( $subrubro as $subr ) {
-							echo '<a href=' . home_url() . '/rubro/' . $subr->slug . ' class="boton-filtro" >' . $subr . '</a>';
-					}
+						//var_dump($subrubros);
+						
+						/*foreach( $subrubros as $subr ) {
+								echo '<a href=' . home_url() . '/rubro/' . $subr->slug . ' class="boton-filtro" >' . $subr . '</a>';
+						}*/
+					?>
+					</ul>
+					<?php
+				}
+
+				/*
 				?>
-
-				<?php /*
 				<div id="auspiciantes">
 					<?php
 					// Busqueda de destacados (auspiciantes)
