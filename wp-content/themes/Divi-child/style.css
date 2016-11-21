@@ -34,14 +34,42 @@
 	top: 150px;
 	right: -700px;
 	color: #111;
-	background-color: #f5e254;
-	border: 3px solid #fff;
-	border-radius: 10px;
-	padding: 2em;
+	background-color: #85354e;
+	border-radius: 20px;
 	text-align: center;
 	transition-duration: 0.5s; 
 	z-index: 200;
 }
+#popup_inner {
+	margin: 15px;
+	background-color: #85354e;
+	border: 3px solid #fff;
+	border-radius: 10px;
+}
+#popup-1er-p, #popup-2do-p, #popup-3er-p {
+	font-size: 150%;
+	text-transform: uppercase;
+	text-align: center;
+	/*font-family: 'Carlston Pro';*/
+	font-family: 'High Tower';
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	padding: 0.5em;
+}
+#popup-1er-p, #popup-3er-p {
+	background: #fff;
+	color: #85354e;
+}
+#popup-2do-p {
+	color: #fff;
+}
+#popup-3er-p {
+ 	width: 60%;
+	border-radius: 5px;
+  margin-left: auto;
+	margin-right: auto;
+ }
 @media (max-width: 500px) {
 	#popup_wrapper {
 		width: 300px;
@@ -54,8 +82,8 @@
 }
 #popup_wrapper a {
 	font-size: 120%;
-	color: #9c4663;
-	text-transform: none;
+	color: #85354e;
+	text-transform: uppercase;
 }
 #popup_close {	
 	cursor: pointer;
@@ -63,7 +91,7 @@
 	top: -25px;
 	left: -20px;
 	font-weight: bold;
-	color: #fff;
+	color: #85354e;
 	font-size: 200%;
 	/*border: 1px solid #111;
 	border-radius: 50%;*/
@@ -87,6 +115,9 @@
 #encabezado div {
 	/* IE Fix:
 	display: table-cell; */
+}
+span#s {
+	font-size: 150%;
 }
 #bodas_header {
 	padding-right: 1em;
@@ -302,7 +333,13 @@ p.negro {
 #contenedor-contacto div#subt_header {
   border-color: #111 !important;
 }
-
+ #container-revista-online {
+ 	text-align: center;
+ }
+ #container-revista-online h1 {
+	text-transform: uppercase;
+	margin-bottom: 1em;
+ }
 
 /* Responsivititititityyyy */
 /* Small devices (landscape phones, 544px and up) */
@@ -329,6 +366,11 @@ p.negro {
 	}
 }
 
-
+@media (min-width: 1281px) {
+	 #sec-encabezado {
+	  background-position-y: bottom;
+	  background-size: cover;
+	}
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  }
