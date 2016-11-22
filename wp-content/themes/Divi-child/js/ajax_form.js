@@ -21,7 +21,6 @@ function enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista) {
 				var email = padre.find('#email')[0].value;
 				var tel    = padre.find('#telefono')[0].value;
 				var nombre = padre.find('#nombre')[0].value;
-				console.log(nombre);
 				var chequeo = padre.find('#chequeo')[0].value;
 				var posicion = padre.find('#pos')[0].value;
 				var mensaje = padre.find('#mensaje')[0].value;
@@ -41,6 +40,7 @@ function enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista) {
 					}
 				}
 				enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista);
+				padre.trigger('reset');
 			})
 		})
 })(jQuery);

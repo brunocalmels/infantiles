@@ -28,6 +28,7 @@
 		}
 		elseif( $posicion === 'footer' ) {
 			$cuerpo .= "<p>Alguien quiere subscribirse al newsletter.</p>";
+			$cuerpo .= '<p>Además, dejó el siguiente mensaje: ' . $mensaje . '</p>';
 		}
 		else {
 			$cuerpo .= "<p>Alguien quiere anunciar en la revista.</p>";
