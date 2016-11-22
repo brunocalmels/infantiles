@@ -83,15 +83,23 @@ function formulario_shortcode( $atts ) {
     else {
       $ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_1">';
     }
-      $ret .= '<input type="text" name="nombre" id="nombre" placeholder="Nombre" />';
-      $ret .= '<input type="text" name="telefono" id="telefono" placeholder="Teléfono" />';
-      $ret .= '<input type="text" name="email" id="email" placeholder="Email" />';
+    $ret .= '<input type="text" name="nombre" id="nombre" placeholder="Nombre" />';
+    $ret .= '<input type="text" name="telefono" id="telefono" placeholder="Teléfono" />';
+    $ret .= '<input type="text" name="email" id="email" placeholder="Email" />';
     $ret .= '</div>';
     if( $locacion === 'footer' ) {
       $ret .= '<div class="">';
+      $ret .= '<input type="hidden" name="pos" id="pos" value="footer" />';
+      $ret .= '<input type="hidden" name="mensaje" id="mensaje" value="Quiero subscribirme al newsletter." />';
+    }
+    elseif( $locacion === 'ayuda' ) {
+      $ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
+      $ret .= '<input type="hidden" name="pos" id="pos" value="ayuda" />';
+      $ret .= '<textarea name="mensaje" id="mensaje" onclick="">Mensaje</textarea>';
     }
     else {
       $ret .= '<div class="et_pb_column et_pb_column_1_2 et_pb_column_2">';
+      $ret .= '<input type="hidden" name="pos" id="pos" value="anunciar" />';
       $ret .= '<textarea name="mensaje" id="mensaje" onclick="">Mensaje</textarea>';
     }
       $ret .= '<input type="submit" name="enviar" value="Enviar">';

@@ -1,4 +1,4 @@
-function enviarMail(chequeo, nombre, email, tel, mensaje, lista) {
+function enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista) {
 	var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -8,21 +8,23 @@ function enviarMail(chequeo, nombre, email, tel, mensaje, lista) {
         	alert("No se pudo enviar el formulario. Por favor, comunicate con nosotros telefónicamente y te atenderemos con gusto.");
       }
   };
-  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?chequeo=" + chequeo + "&nombre=" + nombre + "&email=" + email + "&tel=" + tel + "&mensaje" + mensaje + "&rubros=" + lista, true);
+  ajax.open("GET", varsGlobalesJS.homeUrl + "/form-organizar.php?chequeo=" + chequeo + "&nombre=" + nombre + "&email=" + email + "&tel=" + tel + "&mensaje=" + mensaje + "&rubros=" + lista + "&pos=" + posicion, true);
   ajax.send();
 }
 
 (function($) {
 	$(document).ready(function(){
-		$('#org-submit-div input[type=submit]').on({
-			click: function(e){
+		$('.formulario-div').on('click', 'input[type=submit]', function(e) {
 				e.preventDefault();
 				// Validacion de campos de contacto completos
-				var email  = $('#email')[0].value;
-				var tel    = $('#telefono')[0].value;
-				var nombre = $('#nombre')[0].value;
-				var mensaje = $('#mensaje')[0].value;
-				var chequeo = $('#chequeo')[0].value;
+				var padre = $(this).parents('form');
+				var email = padre.find('#email')[0].value;
+				var tel    = padre.find('#telefono')[0].value;
+				var nombre = padre.find('#nombre')[0].value;
+				console.log(nombre);
+				var chequeo = padre.find('#chequeo')[0].value;
+				var posicion = padre.find('#pos')[0].value;
+				var mensaje = padre.find('#mensaje')[0].value;
 				if (nombre == '' || nombre == null) {
 					alert('Por favor incluí un nombre.');
 					return;
@@ -32,17 +34,13 @@ function enviarMail(chequeo, nombre, email, tel, mensaje, lista) {
 					return;
 				}
 				var lista = '';
-				var rubros = $('input.org-check');
+				var rubros = $('#org-rubros').find('input.org-check');
 				for (i = 0; i < rubros.length; i++) {
 					if (rubros[i].checked) {
-						lista += rubros[i].value + ' ';
+						lista += rubros[i].value + ', ';
 					}
 				}
-				enviarMail(chequeo, nombre, email, tel, mensaje, lista);
-			}
-		}
-
-		)
-
-	});
+				enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista);
+			})
+		})
 })(jQuery);
