@@ -13,39 +13,29 @@
 			},
 		});
 
-		$("#home-moda").on({
+		$("#home-animacion-organizacion").on({
 			click: function() {
-				window.location.href = rUrl + "/moda";
+				window.location.href = rUrl + "/animacion-organizacion";
 			}
 		});
-		$("#home-gastronomia").on({
+		$("#home-bebes-ninos").on({
 			click: function() {
-				window.location.href = rUrl + "/gastronomia";
+				window.location.href = rUrl + "/bebes-ninos";
 			}
 		});
-		$("#home-salones-y-decoracion").on({
+		$("#home-cabina-fotos").on({
 			click: function() {
-				window.location.href = rUrl + "/salones-y-decoracion";
+				window.location.href = rUrl + "/cabina-fotos";
 			}
 		});
-		$("#home-animacion").on({
+		$("#home-colonias-escuelas").on({
 			click: function() {
-				window.location.href = rUrl + "/animacion";
+				window.location.href = rUrl + "/colonias-escuelas";
 			}
 		});
-		$("#home-estetica").on({
+		$("#home-salones-peloteros").on({
 			click: function() {
-				window.location.href = rUrl + "/estetica";
-			}
-		});
-		$("#home-fotografia-video-filmacion").on({
-			click: function() {
-				window.location.href = rUrl + "/fotografia-video-filmacion";
-			}
-		});
-		$("#home-organizacion-de-eventos").on({
-			click: function() {
-				window.location.href = rUrl + "/organizacion-de-eventos";
+				window.location.href = rUrl + "/salones-peloteros";
 			}
 		});
 		$("#home-otros-servicios").on({

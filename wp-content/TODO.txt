@@ -20,15 +20,12 @@
 - Hacer que en el logo salga siempre la S más grande que las letras del medio. - DONE
 - Reemplazar el popup. - DONE
 - Hacer que el thumbnail de la revista se vea en grande. - DONE
-
-
-- Formulario de cada anunciante:
-  - Enviar la data por mail, incluyendo datos posteados y anunciante desde el cual se hace.
-  - Campos obligatorios
-  - Probar que ande el mail
+- Formulario de cada anunciante: - DONE
+  - Enviar la data por mail, incluyendo datos posteados y anunciante desde el cual se hace. - DONE
+  - Campos obligatorios - DONE
+  - Probar que ande el mail - DONE
 
 - Incluir captchas.
-- Chequear que el formulario se envíe bien.
 - Fixear los flex de auspiciantes para IE < 11.
 
 

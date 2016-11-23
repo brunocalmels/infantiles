@@ -1,6 +1,6 @@
 
 .single-anunciante #main-content {
-	background-image: url('http://localhost/bodas/wp-content/uploads/2016/11/fondo_rubros.jpg');
+	background-image: url('http://localhost/infantiles/wp-content/uploads/2016/11/fondo.jpg');
 	background-size: cover;
 	background-position: bottom left; 
 }
@@ -109,7 +109,7 @@ max-wi
   white-space: nowrap;
 }
 .contacto-list li i {
-	color: #9c4663;
+	color: #478893;
 }
 #an-nombre h1 {
 	padding-top: 10px;

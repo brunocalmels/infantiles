@@ -99,10 +99,20 @@
 							<?php
 							endif;	
 							?>
-							<a href=<?php the_permalink(); ?> >
-								<span class="align-helper"></span>
-								<img class="logo_auspiciante" src=<?php echo get_post_meta( get_the_ID(), '_logo_url', true );?> alt=<?php echo the_title();?> >
-							</a>
+							
+							<?php
+								$logo_src = get_post_meta( get_the_ID(), '_logo_url', true );
+								$con_logo = $logo_src!==''?true:false;
+								if( $con_logo ) {
+									?>
+									<a href="<?php the_permalink();?>">
+										<img class="logo_auspiciante" src="<?php echo $logo_src;?>"alt="<?php the_title(); ?>" >
+										<span class="align-helper"></span>
+									</a>
+									<?php
+									}
+								?>
+								
 							<div class="nombre_anunciante titulo_franja center cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">
 								<?php the_title();
 									$rubros = wp_get_post_terms( $post->ID, 'rubro', array('fields' => 'names') );

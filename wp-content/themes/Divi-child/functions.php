@@ -131,3 +131,16 @@ function enqueue_load_fa() {
   wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 }
 ?>
+
+<?php 
+  /*
+  *  Ordena random los anunciantes
+  */
+  function anunciantes_filter( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && ( $query->is_archive() || $query->is_search() ) )  {
+      $query->set( 'orderby', 'rand' );
+      $query->set( 'post_type', 'anunciante' );
+    }
+  }
+add_action( 'pre_get_posts', 'anunciantes_filter' );
+?>

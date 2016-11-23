@@ -17,7 +17,7 @@
 /* Theme customization starts here
 ------------------------------------------------------- */
 /*
-	Bordó hover: #9c4663;
+	Turquesa: #478893;
 */
 
 /* Saca la linea divisoria con el sidebar*/
@@ -34,7 +34,7 @@
 	top: 150px;
 	right: -700px;
 	color: #111;
-	background-color: #85354e;
+	background-color: #478893;
 	border-radius: 20px;
 	text-align: center;
 	transition-duration: 0.5s; 
@@ -42,7 +42,7 @@
 }
 #popup_inner {
 	margin: 15px;
-	background-color: #85354e;
+	background-color: #478893;
 	border: 3px solid #fff;
 	border-radius: 10px;
 }
@@ -59,7 +59,7 @@
 }
 #popup-1er-p, #popup-3er-p {
 	background: #fff;
-	color: #85354e;
+	color: #478893;
 }
 #popup-2do-p {
 	color: #fff;
@@ -82,7 +82,7 @@
 }
 #popup_wrapper a {
 	font-size: 120%;
-	color: #85354e;
+	color: #478893;
 	text-transform: uppercase;
 }
 #popup_close {	
@@ -91,7 +91,7 @@
 	top: -25px;
 	left: -20px;
 	font-weight: bold;
-	color: #85354e;
+	color: #478893;
 	font-size: 200%;
 	/*border: 1px solid #111;
 	border-radius: 50%;*/
@@ -179,7 +179,7 @@ div.rubro div.icono img {
 div.rubro div.nombre {
 	text-transform: uppercase;
 	font-size: 200%;
-	color: #9c4663;
+	color: #478893;
 	padding: 0.2em;
 	background-color: #fff;
 	text-align: center;
@@ -189,7 +189,7 @@ div.rubro div.nombre {
 }
 div.rubro div.nombre.resaltada{
 	color: #fff;
-	background-color: #9c4663;
+	background-color: #478893;
 }
 div.rubro div, div.rubro div img {
 	transition-duration: 0.4s;
@@ -197,7 +197,7 @@ div.rubro div, div.rubro div img {
 
 /* Footer */
 #main-footer {
-	background-color: #9c4663;
+	background-color: #478893;
 	margin-top: -30px;
 }
 #main-footer h4 {
@@ -236,7 +236,7 @@ i.fa {
 	margin-top: 10px;
 }
 .org-rubro {
-	background-color: #9c4663;
+	background-color: #478893;
 	border-radius: 10px;
   padding: 10px !important;
   /* A partir de aca, para badges chiquitas */
