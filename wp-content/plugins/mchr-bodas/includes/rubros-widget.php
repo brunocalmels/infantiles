@@ -11,7 +11,7 @@ class mchr_rubros_widget extends WP_Widget {
 	function __construct() {
 		$widget_opts = array(
 			'classname'		=> 'mchr_widget_class',
-			'description'	=> 'Widgets de funciones específicas del sistema Macher-Bodas',
+			'description'	=> 'Widgets de funciones específicas del sistema Macher-infantiles',
 			);
         $this->id_base ='mchr_rubros_widget';
         $this->name = 'Rubros Widget';
@@ -65,50 +65,38 @@ class mchr_rubros_widget extends WP_Widget {
 	    <ul>
 
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/moda">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/moda_small_hover.png' alt="Moda" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/moda_small.png'>
-						<div class='nombre'>Moda</div>
+					<a href="http://localhost/infantiles/rubro/animacion-organizacion">
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/animacion_organizacion_small_hover.png' alt="Animacion y organizacion" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/animacion_organizacion_small.png'>
+						<div class='nombre'>Animación infantil y organización de eventos</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/gastronomia">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/gastronomia_small_hover.png' alt="Gastronomía" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/gastronomia_small.png'>
-						<div class='nombre'>Gastronomía</div>
+					<a href="http://localhost/infantiles/rubro/bebes-ninos">
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/bebes_ninos_small_hover.png' alt="Bebés y niños" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/bebes_ninos_small.png'>
+						<div class='nombre'>Bebés y niños</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/salones-y-decoracion">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/salones_deco_small_hover.png' alt="Salones y decoración" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/salones_deco_small.png'>
-						<div class='nombre'>Salones y decoración</div>
+					<a href="http://localhost/infantiles/rubro/cabina-fotos">
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/cabina_fotos_small_hover.png' alt="Cabina de fotos" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/cabina_fotos_small.png'>
+						<div class='nombre'>Cabina de fotos</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/animacion">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/animacion_small_hover.png' alt="Animación" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/animacion_small.png'>
-						<div class='nombre'>Animación</div>
+					<a href="http://localhost/infantiles/rubro/colonias-escuelas">
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/colonias_escuelas_small_hover.png' alt="Colonias de vacaciones - Escuelas deportivas" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/colonias_escuelas_small.png'>
+						<div class='nombre'>Colonias de vacaciones - Escuelas deportivas</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/estetica">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/estetica_small_hover.png' alt="Estética" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/estetica_small.png'>
-						<div class='nombre'>Estética</div>
+					<a href="http://localhost/infantiles/rubro/salones-peloteros">
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/salones_peloteros_small_hover.png' alt="Salones y peloteros" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/salones_peloteros_small.png'>
+						<div class='nombre'>Salones y peloteros</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/fotografia-video-filmacion">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/fotografia_small_hover.png' alt="Fotografía - video - filmación" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/fotografia_small.png'>
-						<div class='nombre'>Fotografía - video - filmación</div>
-					</a>
-				</li>
-				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/organizacion-de-eventos">
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/organizacion_small_hover.png' alt="Organización de eventos" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/organizacion_small.png'>
-						<div class='nombre'>Organización de eventos</div>
-					</a>
-				</li>
-				<li class="widget2 cat-item">
-					<a href="http://localhost/bodas/rubro/otros-servicios"s>
-						<img src='http://localhost/bodas/wp-content/uploads/2016/11/otros_small_hover.png' alt="Otros servicios" class="icono-widget2" data-alt-src='http://localhost/bodas/wp-content/uploads/2016/11/otros_small.png'>
+					<a href="http://localhost/infantiles/rubro/otros-servicios"s>
+						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/otros_servicios_small_hover.png' alt="Otros servicios" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/otros_servicios_small.png'>
 						<div class='nombre'>Otros servicios</div>
 					</a>
 				</li>
