@@ -356,6 +356,7 @@ p.negro {
 @media (min-width: 992px) {
 	div#org-rubros {
 		display: flex;
+    justify-content: center;
 	}
 	.org-rubro {
     width: 11%;

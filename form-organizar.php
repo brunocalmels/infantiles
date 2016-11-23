@@ -1,6 +1,8 @@
 <?php
 	require_once("wp-load.php");
 
+	write_log('Entré acá, por lo menos');
+
 	if ( ! wp_verify_nonce( $_REQUEST['chequeo'], 'contacto_anunciante' ) ) {
 	    die( __( 'Security check', 'textdomain' ) ); 
 	}

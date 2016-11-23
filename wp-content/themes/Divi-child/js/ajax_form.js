@@ -2,6 +2,7 @@ function enviarMail(chequeo, posicion, nombre, email, tel, mensaje, lista) {
 	var ajax = new XMLHttpRequest();
   ajax.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+      	console.log(this.responseText);
       	if (this.responseText.indexOf("true") > 0)
           alert("Te contactaremos en breve para ayudarte a organizar el mejor día de tu vida.");
         else
