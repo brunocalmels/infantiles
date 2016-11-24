@@ -65,38 +65,38 @@ class mchr_rubros_widget extends WP_Widget {
 	    <ul>
 
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/animacion-organizacion">
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/animacion_organizacion_small_hover.png' alt="Animacion y organizacion" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/animacion_organizacion_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/animacion-organizacion">
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/animacion_organizacion_small_hover.png' alt="Animacion y organizacion" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/animacion_organizacion_small.png'>
 						<div class='nombre'>Animación infantil y organización de eventos</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/bebes-ninos">
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/bebes_ninos_small_hover.png' alt="Bebés y niños" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/bebes_ninos_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/bebes-ninos">
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/bebes_ninos_small_hover.png' alt="Bebés y niños" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/bebes_ninos_small.png'>
 						<div class='nombre'>Bebés y niños</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/cabina-fotos">
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/cabina_fotos_small_hover.png' alt="Cabina de fotos" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/cabina_fotos_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/cabina-fotos">
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/cabina_fotos_small_hover.png' alt="Cabina de fotos" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/cabina_fotos_small.png'>
 						<div class='nombre'>Cabina de fotos</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/colonias-escuelas">
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/colonias_escuelas_small_hover.png' alt="Colonias de vacaciones - Escuelas deportivas" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/colonias_escuelas_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/colonias-escuelas">
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/colonias_escuelas_small_hover.png' alt="Colonias de vacaciones - Escuelas deportivas" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/colonias_escuelas_small.png'>
 						<div class='nombre'>Colonias de vacaciones - Escuelas deportivas</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/salones-peloteros">
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/salones_peloteros_small_hover.png' alt="Salones y peloteros" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/salones_peloteros_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/salones-peloteros">
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/salones_peloteros_small_hover.png' alt="Salones y peloteros" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/salones_peloteros_small.png'>
 						<div class='nombre'>Salones y peloteros</div>
 					</a>
 				</li>
 				<li class="widget2 cat-item">
-					<a href="http://localhost/infantiles/rubro/otros-servicios"s>
-						<img src='http://localhost/infantiles/wp-content/uploads/2016/11/otros_servicios_small_hover.png' alt="Otros servicios" class="icono-widget2" data-alt-src='http://localhost/infantiles/wp-content/uploads/2016/11/otros_servicios_small.png'>
+					<a href="<?php echo home_url(); ?>/rubro/otros-servicios"s>
+						<img src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/otros_servicios_small_hover.png' alt="Otros servicios" class="icono-widget2" data-alt-src='<?php echo home_url(); ?>/wp-content/uploads/2016/11/otros_servicios_small.png'>
 						<div class='nombre'>Otros servicios</div>
 					</a>
 				</li>

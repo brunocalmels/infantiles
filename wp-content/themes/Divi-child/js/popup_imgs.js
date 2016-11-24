@@ -4,7 +4,7 @@
 		var url = varsGlobalesJS.homeUrl;
 
 		// Popup en homepage
-		var popup_div = "<div id='popup_wrapper'><div id='popup_inner'><div id='popup-1er-p'>En Revista Infantiles sabemos de esto</div><div id='popup-2do-p'>¿Querés que te ayudemos a organizar tu evento?</div><div id='popup-3er-p'><a href='" + url + '/te_ayudamos' + "'>Con tan sólo unos clics.</a></div><div id='popup_close'>&times;</div></div></div>";
+		var popup_div = "<div id='popup_wrapper'><div id='popup_inner'><div id='popup-1er-p'>En Revista Infantiles sabemos de esto</div><div id='popup-2do-p'>¿Querés que te ayudemos a organizar tu evento?</div><div id='popup-3er-p'><a href='" + url + '/recomendaciones' + "'>Con tan sólo unos clics.</a></div><div id='popup_close'>&times;</div></div></div>";
 		$('.home').append(popup_div);
 		// Setear el tiempo para que aparezca (10 segundos...)
 		setTimeout( function(){ $('#popup_wrapper').css('right', '40px'); }, 5000);

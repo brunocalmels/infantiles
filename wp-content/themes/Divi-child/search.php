@@ -44,6 +44,14 @@
 									</a>
 									<?php
 									}
+									else {
+										?>
+									<a href="<?php the_permalink();?>">
+										<img class="logo_auspiciante" src="<?php echo home_url(); ?>/wp-content/uploads/2016/11/bodas_relleno.png" alt="<?php the_title(); ?>" >
+										<span class="align-helper"></span>
+									</a>
+										<?php
+									}
 								?>
 								
 							<div class="nombre_anunciante titulo_franja center cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">

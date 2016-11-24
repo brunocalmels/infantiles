@@ -111,6 +111,14 @@
 									</a>
 									<?php
 									}
+									else {
+										?>
+									<a href="<?php the_permalink();?>">
+										<img class="logo_auspiciante" src="http://localhost/infantiles/wp-content/uploads/2016/11/logo_relleno.png" alt="<?php the_title(); ?>" >
+										<span class="align-helper"></span>
+									</a>
+										<?php
+									}
 								?>
 								
 							<div class="nombre_anunciante titulo_franja center cliqueable" onclick="window.location.href = '<?php the_permalink(); ?>'">
