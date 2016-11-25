@@ -2,5 +2,4 @@
 - Incluir captchas.
 - Fixear los flex de auspiciantes para IE < 11.
 
-- Imagen de Bodas footer.
 - Envío de mails en formularios.

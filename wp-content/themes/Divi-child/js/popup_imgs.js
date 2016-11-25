@@ -12,7 +12,7 @@
 		// Funcionalidad de cerrar el popup
 		$('#popup_close').on({
 			click: function() {
-				$('#popup_wrapper').css('right', '-700px');
+				$('#popup_wrapper').css('right', '-7000px');
 			}
 		})
 		

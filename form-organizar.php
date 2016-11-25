@@ -1,8 +1,6 @@
 <?php
 	require_once("wp-load.php");
 
-	write_log('Entré acá, por lo menos');
-
 	if ( ! wp_verify_nonce( $_REQUEST['chequeo'], 'contacto_anunciante' ) ) {
 	    die( __( 'Security check', 'textdomain' ) ); 
 	}
@@ -24,7 +22,7 @@
 		// Envía un email con los rubros.
 		$cuerpo = "<p>Hola.</p>";
 		if( $posicion === 'ayuda' ) {
-			$cuerpo .= "<p>Alguien quiere ayuda con la organización de su boda en los siguientes rubros:</p>";
+			$cuerpo .= "<p>Alguien se contactó desde Infantiles, interesado en los siguientes rubros:</p>";
 			$cuerpo .= '<p>' . $rubros . '</p>';
 			$cuerpo .= '<p>Además, dejó el siguiente mensaje: ' . $mensaje . '</p>';
 		}
@@ -41,7 +39,7 @@
 		$cuerpo .= '<li>Teléfono: ' . $tel . '</li>';
 		$cuerpo .= '</ul></p>';
 		$asunto = "Contacto desde el sitio web";
-		$headers = array('Content-Type: text/html; charset=UTF-8', 'From: Sitio web de Revista Bodas <web@revistabodas.com.ar>');
+		$headers = array('Content-Type: text/html; charset=UTF-8', 'From: Sitio web de Revista Infantiles <web@revistabodas.com.ar>');
 		$destinatarios = 'revistabodas@revistabodas.com.ar';
 		write_log( 'Mandando mail con cuerpo: ' . $cuerpo . ' a ' . $destinatarios );
 		$res = wp_mail( $destinatarios, $asunto, $cuerpo, $headers );

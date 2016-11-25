@@ -133,17 +133,17 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 								</div> <!-- .contacto -->
 								<div class="formulario">
 									<h3>Mensaje</h3>
-									<form class="an-formulario" action="#">
+									<form class="an-formulario" action="<?php echo home_url(); ?>/form-anunciante.php">
 									<?php
 									// Nonce for security
-									wp_nonce_field( plugin_basename( __FILE__ ), 'contacto_anunciante' );
+									wp_nonce_field( 'contacto_anunciante', 'chequeo' );
 									// custom meta box form elements
-									echo '<input type="hidden" name="contacto" value="">';
-									echo '<input type="hidden" name="anunciante" value=' . $post->post_title . ' >';
-									echo '<input type="text" name="nombre" placeholder="Nombre" />';
-									echo '<input type="text" name="telefono" placeholder="Teléfono" />';
-									echo '<input type="text" name="email" placeholder="Email" />';
-									echo '<textarea name="mensaje" onclick="">Mensaje</textarea>';
+									//echo '<input type="hidden" name="contacto" value="">';
+									echo '<input type="hidden" name="anunciante" id="anunciante" value="' . $post->post_title . '" >';
+									echo '<input type="text" name="nombre" id="nombre" placeholder="Nombre" />';
+									echo '<input type="text" name="telefono" id="telefono"  placeholder="Teléfono" />';
+									echo '<input type="text" name="email" id="email" placeholder="Email" />';
+									echo '<textarea name="mensaje" id="mensaje" onclick="">Mensaje</textarea>';
 									echo '<input type="submit" name="enviar" value="Enviar">'
 									?>
 									</form>
